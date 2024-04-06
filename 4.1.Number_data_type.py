@@ -36,5 +36,15 @@ print(type(c))
 
 
 import random
-print(random.randrange(1,5))
+n=random.randrange(1,10)
+print(n)
+
+a=input("Enter the input:")
+print(a)
+
+a=int(input("Enter the input:"))
+print(a)
+
+print(type(a))
+
 
