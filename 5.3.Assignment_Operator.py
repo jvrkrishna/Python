@@ -3,15 +3,16 @@ print("Assign the value to variable where x is:",x)
 
 x+= 3
 print(x)
-# a += b
-# a *= b
-# a/=b
-# a%=b
-# a -= b
-# a //= b
-# a **= b
-# a &= b
-# a |= b
-# a ^= b
-# a >>= b
-# a <<= b
+
+x-=3
+print(x)
+
+x/=3
+print(x)
+
+x=10
+x//=3
+print(x)
+
+x**=3
+print(x)
