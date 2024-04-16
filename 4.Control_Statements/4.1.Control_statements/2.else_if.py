@@ -9,3 +9,13 @@ if age>=18:
     print("You are eligible to vote !!")
 else:
     print("Sorry! you have to wait !!")
+
+
+user="ram"
+pass="Ram@123"
+user_name=input("Enter the User Name:")
+password=input("Enter the Password:")
+if user==user_name and pass==password:
+    print("Success")
+else:
+    print("Try again")
