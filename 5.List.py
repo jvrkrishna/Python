@@ -25,4 +25,4 @@ print(list2[-1])
 print(list2[-3:])
 print(list2[:-1])
 print(list2[-3:-1])
-print(list2[-1])
+
