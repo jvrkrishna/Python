@@ -20,7 +20,7 @@ print(list[2:5+1])
 print(list[1:6:2])
 print(list[-1])
 
-list2 = [1,2,3,4,5]
+list2 = [1,2,3,4,5,6]
 print(list2[-1])
 print(list2[-3:])
 print(list2[:-1])
