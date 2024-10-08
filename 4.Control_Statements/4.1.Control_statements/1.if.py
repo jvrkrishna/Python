@@ -14,7 +14,9 @@ b=int(input("Enter b value:"))
 c=int(input("Enter c value:"))
 if a>b & a>c:
     print("a is big")
+    
 if b>c & b>a:
     print("b is big")
+    
 if c>b & c>a:
     print("c is big")
