@@ -18,3 +18,19 @@ elif (marks > 30 and marks <= 40):
     print("You scored grade C ...")
 else:
     print("Sorry you are fail ?")
+    
+#Calculator program
+a=int(input("Enter a value:"))
+b=int(input("Enter b value:"))
+print("press the \n + to add \n - to sub \n * to mul \n / to div")
+choice=input("Enter your choice:")
+if choice=='+':
+    print(a+b)
+elif choice=='-':
+    print(a-b)
+elif choice=="*":
+    print(a*b)
+elif choice=='/':
+    print(a/b)
+else:
+    print("please select properly")

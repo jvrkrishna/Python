@@ -12,6 +12,7 @@ else:
 a=int(input("Enter a value:"))
 b=int(input("Enter b value:"))
 c=int(input("Enter c value:"))
+# Here checks all the conditions
 if a>b & a>c:
     print("a is big")
     
