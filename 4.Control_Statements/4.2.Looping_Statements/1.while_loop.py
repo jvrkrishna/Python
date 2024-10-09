@@ -20,8 +20,10 @@
 # i=1
 # n=int(input("Enter n Value:"))
 # while i<=10:
-#     print("%d X %d = %d"%(n,i,n*i))
+#     print("%d X %d = %d"%(n,i,n*i))  #print(f'{n} * {i} = {n*i}')
 #     i=i+1
+
+
 
 # #Write a program to print infinite loop
 # var = 1
@@ -54,9 +56,31 @@
 #     i=i+1
 
 #WAP to print sum of N natural numbers
-i=1
-sum=0
-while i<10:
-    sum=sum+i
-    i=i+1
-print("Sum is:",sum)
+# i=1
+# sum=0
+# while i<10:
+#     sum=sum+i
+#     i=i+1
+# print("Sum is:",sum)
+
+
+#WAP ro reap the numbers until -1 is entered also count the -ve, +ve and zero entered by users
+# num=int(input("Enter a value:"))
+# pn=0 #positive number
+# nn=0 #negative number
+# zn=0 #zero number
+# while num!=-1:
+#     if num>0:
+#         pn=pn+1
+#     elif num<0:
+#         nn=nn+1
+#     else:
+#         zn=zn+1
+#     num=int(input("Enter a value:"))
+
+# print("Number of positives",pn)
+# print("Number of Negatives",nn)
+# print("Number of Zeros",zn)
+        
+    
+        
