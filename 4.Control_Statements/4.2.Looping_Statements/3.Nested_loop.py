@@ -17,6 +17,19 @@
 #     i=i+1
 
 
+
+# x = [1, 2]
+# y = [4, 5]
+# i = 0
+# while i < len(x) :
+#     j = 0
+#     while j < len(y) :
+#         print(x[i] , y[j])
+#         j = j + 1
+#     i = i + 1
+
+
+
 # for i in range(1,11):
 #     for j in range(2,4):
 #         print(i*j,end = ' ')
@@ -39,13 +52,4 @@
 
 
 
-# x = [1, 2]
-# y = [4, 5]
-# i = 0
-# while i < len(x) :
-#     j = 0
-#     while j < len(y) :
-#         print(x[i] , y[j])
-#         j = j + 1
-#     i = i + 1
 

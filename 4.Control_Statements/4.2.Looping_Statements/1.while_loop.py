@@ -46,3 +46,17 @@
 #         break 
 #     print(a[i])
 #     i=i+1
+
+# # WAP to print stars
+# i=1
+# while i<10:
+#     print("*",end=' ')
+#     i=i+1
+
+#WAP to print sum of N natural numbers
+i=1
+sum=0
+while i<10:
+    sum=sum+i
+    i=i+1
+print("Sum is:",sum)
