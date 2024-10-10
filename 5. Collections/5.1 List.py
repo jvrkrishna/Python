@@ -37,14 +37,14 @@ a="Welc-ome to pyt-hon wo-rld"
 L2=a.split('-') # based up on('-') by default space
 print(L2)
 
-
+#Accessing the elements from list
 list = [1,2,3,4,5,6,7]
 print(list[0])
 print(list[1])
 print(list[2])
 print(list[3])
 
-# Slicing the elements
+# Accessing the elements by using slice operator
 print(list[0:6])
 print(list[:])
 print(list[2:5])
@@ -58,3 +58,159 @@ print(list2[-3:])
 print(list2[:-1])
 print(list2[-3:-1])
 
+#########updating the list Elements###############
+L1=[1,2,3,4,10,20,30]
+L1[2]=30
+print(L1)
+L1[2:4]=30,40
+print(L1)
+
+########### Iterating the list#################
+#Visiting all the elements in a sequence is called Traversing
+list = ["John", "David", "James", "Jonathan"]
+for i in list:
+    print(i)
+    
+list = ["John", "David", "James", "Jonathan"]
+i=0
+while i<len(list):
+    print(list[i])
+    i=i+1
+    
+###WAP to display list elements of a list along with positive and negative index.###
+list=[10,20,30]
+n=len(list)
+for i in range(n):
+    print(f"{list[i]} is present at index {i}/{i-n}")
+    
+################### Using methods on list ######################
+#####Append Method(Add at end)##Drawback we cannot add at Specified loction-
+list=[1,2,3]
+list.append(4)  #To add as sub list use list.append([4])
+print(list)
+
+###Create a list by adding 20 0s in list
+l=[]
+for i in range(20):
+    l.append(0)
+    
+print(l)
+
+#####Insert Method(Insert the element at specified location)
+l1=[1,2,3,4,2,5,6,7,2,8,9,10]
+l1.insert(3,24)    #3rd index value 24
+print(l1)
+
+l1.insert(20,84)  #insert at end because there are no such indexes
+print(l1)
+l1.insert(-34,88) #insert at start because there are no such indexes
+print(l1)
+
+#######Count Method(Used to count how many times the element is present)
+List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
+print(List.count(1)) 
+
+######Index Method(Used to know the index number of specific element)
+List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
+print(List.index(2))
+
+#######Remove method(Used to Delete the specified element)
+l1=[1,2,3,4,5,6,7,8,9,10]
+l1.remove(l1[2])
+print(l1)
+
+list = [0,1,2,3,4]
+print("printing original list: ");
+for i in list:
+    print(i,end=" ")
+
+list.remove(2)
+print("\nprinting the list after the removal of second element...") 
+
+for i in list:
+    print(i,end=" ")
+
+#######pop Method used to delete element by index by default last element if we not mention index
+List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
+print(List.pop()) #By default last element
+print(List)
+
+print(List.pop(3))
+print(List) #By index number
+
+#######extend method (Used to extend the list or add a sublist)
+list=[1,2,3]
+list.extend([4])  #we cannot process this extend as sublist
+print(list)
+
+
+List1 = [1, 2, 3]
+List2 = [2, 3, 4, 5]
+
+# Add List2 to List1
+List1.extend(List2)
+print(List1)
+# now Add List1 to List2 List2.extend(List1) 
+print(List2)
+
+
+######Sum Method
+List = [1, 2, 3, 4, 5]
+print(sum(List)) 
+
+######Length Method
+List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
+print(len(List)) 
+
+list=[1,3,2,5,2,7,8]
+for i in range(len(list)):
+    if list[i]==2:
+        print(i)
+
+###### Min method
+List = [8, 2, 3, 5,8,9]
+print(min(List))
+
+###### Clear the complete list
+List = [8, 2, 3, 5,8,9]
+List.clear()
+print(List)
+
+
+#########Copy Method
+List = [8, 2, 3, 5,8,9]
+print(List)
+b=List.copy()
+List.append(10)
+print(List)
+print(b)
+
+
+####del Method used to delete specific element by index
+List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
+del List[0] 
+print(List)
+
+####remove Method used to delete specific element by element
+List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
+List.remove(3) 
+print(List) 
+
+##### reverse method It is used to reverse the list.
+List = [8, 2, 3, 5,8,9]
+List.reverse()
+print(List)
+
+
+######sort() It is used to sort the order.
+list = [8, 2, 3, 5,8,9]
+list.sort()
+print(list)
+
+list.sort(reverse=True)  #Decending order
+print(list)
+
+
+
+
+    
