@@ -232,5 +232,20 @@ while True:
         print("The number is not present")
         choice=int(input("Enter your Lucky Number:"))
         
-        
+#WAP to print the list of elements in reverse order      
+list=[10,20,40,50,60]
+n=len(list)-1
+
+while n>=0:
+    print(list[n])
+    n=n-1   
     
+ #WAP to print min and max values in the list
+list=[10,30,4,50,35,60]
+min=list[0]
+
+for i in list:
+    if i<min:
+        min=i
+        
+print("Min is:", min)   
