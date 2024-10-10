@@ -249,3 +249,122 @@ for i in list:
         min=i
         
 print("Min is:", min)   
+
+'''wap to search a value from a list then display its index, if the value is present
+multiple times then print its all indices and also count the number of times that value 
+is repeated in the list.'''
+
+list=[10,20,30,"Ram",40,50,10,20,30,40]
+i=0
+count=0
+search=int(input("Enter the value you want to search:"))
+
+while i<len(list):
+    if search==list[i]:
+        print(f"The value of {search} is present in the list and index is {i}")  
+        count=count+1
+    i=i+1
+print(f'{search} is present {count} times')
+
+
+###Example
+l1={"Hi ", "Hello "}
+l2={"Ram", "Banti","Seetha"}
+new_list=[]
+
+for i in l1:
+    for j in l2:
+        new_list.append(i+j)
+        
+print(new_list)  ###### Hi ram, Hi Banti, Hi seetha, Hello ram, Hello Banti, Hello Seetha
+
+####Example to print first and last char in a word
+l1={"Ram", "Banti","Seetha"}
+new_list=[]
+
+for i in l1:
+        new_list.append(i[0]+i[-1])
+        
+print(new_list)
+
+#enumerate function used to print the value and index
+#By using enumerate the code will decrease.
+l1=[10,20,30,40,50]
+
+for i in enumerate(l1):
+    print(i)
+    
+#If list is present inside another list is called as Nested List.
+## 0  1   2  3  4[1,2,3]  5   6
+l=[10,20,30,40,[41,42,43],50,60]
+###Negative index as well
+
+print(l[2])
+print(l[4][1])
+
+
+#Nested List in a Matrix
+l=[[10,20,30],[40,50,60],[70,80,90]]
+
+print(l)
+
+####print row wise matrix
+print(l[0])
+print(l[1])
+print(l[2])
+
+for i in l:
+    print(i)
+    
+#If you want to create a list from iterable objects like list,tuple,range,dict etx.
+#By writing very less code in efficient way then we can go for list comprehensions.
+####Normal example
+l=[]
+for i in range(11):
+    l.append(i)
+    
+print(l)
+
+# ###By using list comprehension
+l=[i for i in range(11)]
+print(l)
+
+l=[i*2 for i in range(11)]
+print(l)
+
+
+l=[i*i for i in range(11)]
+print(l)
+
+l=[i for i in range(1,21) if i%2==0]
+print(l)
+
+names=["ram","banti","Chanti"]
+l=[i for i in names]
+print(l)
+
+names=["rama","banti","Chanti"]
+l=[i[0:2] for i in names]
+print(l)
+
+#Create a list by addthe elements which is containing letter a
+names=["rama","banti","roji"]
+l=[i for i in names if 'a' in i]
+print(l)
+
+#Replace the list element
+names=["rama","banti","roji"]
+l=[i if i !="banti" else 'hello' for i in names]
+print(l)
+
+#create alist form tuple
+t=(10,20,30,40)
+l=[i for i in t]
+print(l)
+
+#Create a matrcix using list comprehension
+# m=[i for i in range(3)]  #Step 1
+# print(m)
+
+m=[[j for j in range(3)] for i in range(3)]
+print(m)
