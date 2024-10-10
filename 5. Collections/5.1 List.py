@@ -210,7 +210,27 @@ print(list)
 list.sort(reverse=True)  #Decending order
 print(list)
 
+#Concatination of list
+L1=[20,30,40,50,60]
+S1=['Ram','Priyanka',40,50]
+C1=L1+S1
+print(C1)
 
+#Repetition of Lists
+L1=[10,20,40]
+Rep=L1*5
+print(Rep)
 
-
+#WAP to check the number is present in the list or not until it matches
+L1=[10,20,30,40,50,60]
+choice=int(input("Enter your Lucky Number:"))
+while True:
+    if choice in L1:
+        print("Yes your number is present")
+        break
+    else:
+        print("The number is not present")
+        choice=int(input("Enter your Lucky Number:"))
+        
+        
     
