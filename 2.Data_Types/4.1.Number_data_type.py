@@ -74,10 +74,6 @@ print("My name is %s and my age is %d"%(name,age))
 age=29
 print("My name is {} and my age is {}".format(name,age))
 
-
-
-
-
 name1="Gopal"
 print("My name is {name} and my age is {age}".format(name=name1,age=age))
 
