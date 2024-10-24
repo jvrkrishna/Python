@@ -37,40 +37,39 @@ print(type(b))
 print(type(c))
 
 
-SOME IMP INBUILT FUNCTIONS Before concept :
-Random Number
-Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:
+# SOME IMP INBUILT FUNCTIONS Before concept :
 
-Example
-Import the random module, and display a random number between 1 and 9:
+# Random Number
+'''Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:'''
+
+# Example
 import random
 print(random.randrange(1,10))
 
-input function
-Input function is used to send the data dynamically by using terminal.
-The below program takes the input of any data type
+#input function
 a=input("Enter the input:")
 print(a)
 
-If suppose if we give specific data type it will take that type of data only as input.
+#If suppose if we give specific data type it will take that type of data only as input.
 a=int(input("Enter the input:"))
 print(a)
 
 print(type(a))
 
-But the input() default type is string.
+#But the input() default type is string.
 
-Types to print the output
-1.	Print with the print function
+# Types to print the output
+
+# 1.Print with the print function
 X=10
 print(X)
 
-2.	Print with string formatting %
+# 2.Print with string formatting %
 name="Rama Krishna"
 age=29
 print("My name is %s and my age is %d"%(name,age))
 
-3.	Print with the str.format() method
+# 3.Print with the str.format() method
 age=29
 print("My name is {} and my age is {}".format(name,age))
 
@@ -81,7 +80,7 @@ course="Python"
 price=2.99 #print this is dollar format
 print("My course is {} and the price is ${price:.1f}".format(course,price=price))
 
-4.	Print with the ‘f-string’ 
+# 4.Print with the ‘f-string’ 
 name="Rama Krishna"
 print(f"my name is {name}")
 
@@ -89,7 +88,7 @@ salary=10000
 tax=0.2
 print(f"my monthly salary is ${salary-tax}")
 
-5.	Print to a file or a stream
+# 5.Print to a file or a stream
 #printing to a file
 with open('result.txt','w') as f:
     print("This will retun to a file", file=f)
