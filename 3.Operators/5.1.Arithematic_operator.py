@@ -1,5 +1,5 @@
-a=10
-b=20
+a=20
+b=10
 # Addition(+)
 add=a+b
 print(add)
@@ -22,7 +22,7 @@ print(fdiv)
 
 # modulas (%)
 mod=b%a
-print(mod)
+print(mod) # In this if the value of a is higher than b then it simply returns b value
 
 # power/square (**)
 pow=a**b

@@ -1,15 +1,16 @@
-a=1
-b=1
-c=a and b
-c=a&b   #if both are true then only true
+a=10
+b=20
+c=a>9 and b>19 #if both are true then only true
+print(c)
+
+a=10
+b=20
+c=a>9 or b>20 #if any one is true then it is true
+print(c)
+
+a=10
+b=20
+c=not a>9 or b>20 #not used to reverse the output
 print(c)
 
 
-a=1
-b=0
-c=a or b
-c=a|b  #if any one is true then it is true
-print(c)
-
-a!=0
-print(a)
