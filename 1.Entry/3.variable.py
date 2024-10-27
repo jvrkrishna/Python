@@ -44,7 +44,7 @@ print("Python is " + x)
 
 x = "awesome"
 def myfunc():
-    global x  #global is a keyword which is used to change the local value as well
+    global x  #global is a keyword which is used to change the global varible in local as well
     x = "fantastic"
 myfunc()
 print("Python is " + x)
