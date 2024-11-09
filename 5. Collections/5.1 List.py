@@ -114,7 +114,7 @@ print(List.count(1))
 List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
 print(List.index(2))
 
-#######Remove method(Used to Delete the specified element)
+#######Remove method(Used to Delete the specified index element)
 l1=[1,2,3,4,5,6,7,8,9,10]
 l1.remove(l1[2])
 print(l1)
@@ -171,12 +171,6 @@ for i in range(len(list)):
 List = [8, 2, 3, 5,8,9]
 print(min(List))
 
-###### Clear the complete list
-List = [8, 2, 3, 5,8,9]
-List.clear()
-print(List)
-
-
 #########Copy Method
 List = [8, 2, 3, 5,8,9]
 print(List)
@@ -185,6 +179,10 @@ List.append(10)
 print(List)
 print(b)
 
+###### Clear the complete list
+List = [8, 2, 3, 5,8,9]
+List.clear()
+print(List)
 
 ####del Method used to delete specific element by index
 List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
