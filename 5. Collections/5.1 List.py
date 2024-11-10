@@ -114,22 +114,6 @@ print(List.count(1))
 List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
 print(List.index(2))
 
-#######Remove method(Used to Delete the specified index element)
-l1=[1,2,3,4,5,6,7,8,9,10]
-l1.remove(l1[2])
-print(l1)
-
-list = [0,1,2,3,4]
-print("printing original list: ");
-for i in list:
-    print(i,end=" ")
-
-list.remove(2)
-print("\nprinting the list after the removal of second element...") 
-
-for i in list:
-    print(i,end=" ")
-
 #######pop Method used to delete element by index by default last element if we not mention index
 List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
 print(List.pop()) #By default last element
@@ -189,6 +173,22 @@ List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
 del List[0] 
 print(List)
 
+#######Remove method(Used to Delete the specified index element)
+l1=[1,2,3,4,5,6,7,8,9,10]
+l1.remove(l1[2])
+print(l1)
+
+list = [0,1,2,3,4]
+print("printing original list: ");
+for i in list:
+    print(i,end=" ")
+
+list.remove(2)
+print("\nprinting the list after the removal of second element...") 
+
+for i in list:
+    print(i,end=" ")
+    
 ####remove Method used to delete specific element by element
 List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
 List.remove(3) 
