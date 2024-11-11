@@ -83,6 +83,13 @@ n=len(list)
 for i in range(n):
     print(f"{list[i]} is present at index {i}/{i-n}")
     
+l2=[10,20,30]
+n=len(l2)
+z=0
+for i in l2:
+    print(f"{[i]} is in the index of {[z]}/{[z-n]}")
+    z=z+1
+    
 ################### Using methods on list ######################
 #####Append Method(Add at end)##Drawback we cannot add at Specified loction-
 list=[1,2,3]
