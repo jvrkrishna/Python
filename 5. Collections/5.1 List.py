@@ -243,7 +243,13 @@ n=len(list)-1
 
 while n>=0:
     print(list[n])
-    n=n-1   
+    n=n-1
+    
+list=[10,20,40,50,60]
+list.sort(reverse=True)
+
+for i in list: 
+    print(i)   
     
  #WAP to print min and max values in the list
 list=[10,30,4,50,35,60]
