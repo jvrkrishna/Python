@@ -1,14 +1,8 @@
-def hide_char():
-    name="Rama"
-    char='a'
-    count=0
-    hidden_string=""
-    for c in name:
-        if c==char:
-            hidden_string +=""
-            
-        else:
-            hidden_string += c
-    print(hidden_string)
+s={10}
+l=[20,30]
+t=(40,30,50)
+s.update(l,t)
+print(s)
 
-hide_char()
+s.update(l,range(10))
+print(s)

@@ -247,7 +247,6 @@ while n>=0:
     
 list=[10,20,40,50,60]
 list.sort(reverse=True)
-
 for i in list: 
     print(i)   
     
@@ -327,7 +326,8 @@ print(l[2])
 for i in l:
     print(i)
     
-#If you want to create a list from iterable objects like list,tuple,range,dict etx.
+#If you want to create a list from iterable objects like list,tuple,range,dict etc
+# .
 #By writing very less code in efficient way then we can go for list comprehensions.
 ####Normal example
 l=[]
