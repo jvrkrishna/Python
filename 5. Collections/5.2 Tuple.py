@@ -15,7 +15,7 @@ print(type(L4))
 print(L4)
 
 #Creation of Tuple Dynamically by using eval() function.
-L1=eval(input("Enter the L1 Elements:"))  #input ------ (10,20,30) ---- brackets compulsary
+L1=eval(input("Enter the L1 Elements:"))  #input ------ (10,20,30)
 print(type(L1))
 print(L1)
 

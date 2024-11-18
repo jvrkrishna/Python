@@ -57,3 +57,19 @@ if __name__ == '__main__':
     x=range(1,n+1)
     for i in x:
         print(i,end="")
+
+#WAP to print string by skipping some element       
+def hide_char():
+    name="Rama"
+    char='a'
+    count=0
+    hidden_string=""
+    for c in name:
+        if c==char:
+            hidden_string +=""
+            
+        else:
+            hidden_string += c
+    print(hidden_string)
+
+hide_char()
