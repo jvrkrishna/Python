@@ -243,7 +243,18 @@ s={i if i !='Rama' else 'Ram' for i in names}
 print(s)
 
 #Frozenset
+#Frozenset is similar to set data structure but there is only the difference is frozenset is immutable in nature, so that we cant perform modification operation.
+#Creation of Frozen Set
+s={10,20,30,40}
+fs=frozenset(s)
+print(fs)
+print(type(fs))
 
+#Frozenset is immutable in nature so we cant use add(), remove() methods.
+s={10,20,30,40}
+fs=frozenset(s)
+fs.add(26) #Error
+fs.remove(20) #Error
 
 
 
