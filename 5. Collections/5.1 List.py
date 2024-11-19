@@ -327,7 +327,6 @@ for i in l:
     print(i)
     
 #If you want to create a list from iterable objects like list,tuple,range,dict etc
-# .
 #By writing very less code in efficient way then we can go for list comprehensions.
 ####Normal example
 l=[]

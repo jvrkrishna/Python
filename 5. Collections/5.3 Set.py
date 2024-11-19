@@ -201,6 +201,47 @@ B={4,5}
 print(A.isdisjoint(B))
 
 #Set Comprehentions
+#If you want to create a list from iterable objects like list,tuple,range,dict etc
+#By writing very less code in efficient way then we can go for set comprehensions.
+####Normal example
+# s=set()
+# for i in range(11):
+#     s.add(i)
+    
+# print(s)
+
+# # ###By using list comprehension
+# s={i for i in range(11)}
+# print(s)
+
+# s={i*2 for i in range(11)}
+# print(s)
+
+#Another Example
+# l=[10,20,30]
+# s={i*i for i in l}
+# print(s)
+
+#Create a set by adding all the elements from 20 to 40 which is divisible by 4.
+s={i for i in range(20,41) if i%4==0}
+print(s)
+
+#Create a set from list called as names by adding the first char of each element.
+name=["Rama","Banti","Chanti"]
+s={i for i in name}
+print(s)
+
+s={i[0] for i in name}
+print(s)
+
+s={i.upper() for i in name}
+print(s)
+
+#Create a set from a list(names) by adding all the elements but if the element is Rama then instead of Rama add Ram
+names=["Raj","Rama","Raghu"]
+s={i if i !='Rama' else 'Ram' for i in names}
+print(s)
+
 #Frozenset
 
 
