@@ -113,6 +113,57 @@ s={10,20,30,40,50}
 s.pop() #print(s.pop()) --- It returns pop element
 print(s)
 
+#copy Method
+#It is used to copy 
+s1={10,20,30,40,50}
+s2=s1.copy()
+print(s1)
+print(s2)
+print(id(s1))
+print(id(s2))
+
+s1.add(80)
+print(s1)
+print(s2)
+
+#Here also return same set of value but if we change the set elements in one set it will reflect another set also.
+s1={10,20,30,40,50}
+s2=s1  #assigning 
+print(s1)
+print(s2)
+print(id(s1))
+print(id(s2))
+
+s1.add(80)
+print(s1)
+print(s2)
+
+#clear method
+#It is used to clear all then elements from the set
+s1={10,20,30,40,50}
+s1.clear()
+print(s1)
+
+'''Enumarate Function:
+            The enumerate() function takes a collection (e.g. a tuple) and returns it as an enumerate object.The enumerate() function adds a counter as the key of the enumerate object.
+
+Syntax:
+        enumerate(iterable, start)
+
+iterable ----------- An iterable object
+start---------A Number. Defining the start number of the enumerate object. Default 0
+
+Example:
+x = ('apple', 'banana', 'cherry')
+y = enumerate(x)
+print(list(y))
+
+output: It returns Index(i.e., Iterable) and value
+[(0, 'apple'), (1, 'banana'), (2, 'cherry')] '''
+
+
+
+
 
 
 
