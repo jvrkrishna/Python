@@ -161,7 +161,33 @@ print(list(y))
 output: It returns Index(i.e., Iterable) and value
 [(0, 'apple'), (1, 'banana'), (2, 'cherry')] '''
 
+#Union Method
+#It is used to return all the elements presesnt in both the sets
+s1={10,20,30,40}
+s2={10,50,60}
+print(s1.union(s2))
+print(s1 | s2)
 
+#Intersection Method
+#It is used to return all the common elements in both the sets
+s1={10,20,30,40}
+s2={10,50,60}
+print(s1.intersection(s2))
+print(s1&s2)
+
+#Difference Method
+#It is used to return only a elements not S2 elements or not common elements
+s1={10,20,30,40}
+s2={10,50,60}
+print(s1.difference(s2))
+print(s1-s2)
+
+#Symmetric Difference
+#It is used to return all the elements which are in s1 and s2 but not common elements 
+s1={10,20,30,40}
+s2={10,50,60}
+print(s1.symmetric_difference(s2))
+print(s1^s2)
 
 
 
