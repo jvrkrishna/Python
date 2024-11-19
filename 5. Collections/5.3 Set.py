@@ -189,6 +189,19 @@ s2={10,50,60}
 print(s1.symmetric_difference(s2))
 print(s1^s2)
 
+#Subset and Superset
+A={1,2,3,4,5,6,7,8}
+B={2,3,4}
+print(B.issubset(A))
+print(A.issuperset(B))
+
+#Disjoint
+A={1,2,3}
+B={4,5}
+print(A.isdisjoint(B))
+
+#Set Comprehentions
+#Frozenset
 
 
 
