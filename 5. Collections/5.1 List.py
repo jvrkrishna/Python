@@ -92,6 +92,15 @@ list=[1,2,3]
 list.append(4)  #To add as sub list use list.append([4])
 print(list)
 
+###Create a list by adding values Dynamically
+list=[]
+n=int(input("Enter the number of elements:"))
+for k in range(0,n):
+    ele=int(input("Enter the elements of the list:"))
+    list.append(ele)
+    
+print(list)
+
 ###Create a list by adding 20 0s in list
 l=[]
 for i in range(20):
@@ -257,16 +266,18 @@ for i in list:
     print(i)   
     
 #WAP to print the elements in  sort order by using for or while
-# list=[10,50,30,40,20]
-# list.sort()
-# print(list)
-
 list=[10,50,30,40,20]
+list.sort()
+print(list)
+
+list=[50,30,10,40,20]
 for i in range(len(list)):
     for j in range(i+1,len(list)):
         if list[i]>list[j]:
             list[i],list[j]=list[j],list[i]
-
+    print(list)
+    
+print("\nFinal List is:")
 print(list)
     
  #WAP to print min and max values in the list
