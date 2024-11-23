@@ -89,6 +89,13 @@ z=0
 for i in l2:
     print(f"{[i]} is in the index of {[z]}/{[z-n]}")
     z=z+1
+
+list=[10,20,30]    
+i=0
+n=len(list)
+while i<n:
+    print(i, list[i],n-i)
+    i=i+1
     
 ################### Using methods on list ######################
 #####Append Method(Add at end)##Drawback we cannot add at Specified loction-
@@ -180,13 +187,13 @@ List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
 del List[0] 
 print(List)
 
-#######Remove method(Used to Delete the specified index element)
-l1=[1,2,3,4,5,6,7,8,9,10]
-l1.remove(l1[2])
+#######Remove method(Used to Delete the specified element and by specific index element)
+l1=[1,2,3,4,5,6,7,8,9,10,2]
+l1.remove(2)    #l1.remove(l1[1])
 print(l1)
 
 list = [0,1,2,3,4]
-print("printing original list: ");
+print("printing original list: ")
 for i in list:
     print(i,end=" ")
 
