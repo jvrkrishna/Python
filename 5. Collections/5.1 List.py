@@ -387,7 +387,7 @@ names=["rama","banti","Chanti"]
 l=[i[0:2] for i in names]
 print(l)
 
-#Create a list by addthe elements which is containing letter a
+#Create a list by add the elements which is containing letter a
 names=["rama","banti","roji"]
 l=[i for i in names if 'a' in i]
 print(l)
