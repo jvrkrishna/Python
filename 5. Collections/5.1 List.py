@@ -294,7 +294,7 @@ print("Min is:", min)
 multiple times then print its all indices and also count the number of times that value 
 is repeated in the list.'''
 
-list=[10,20,30,"Ram",40,50,10,20,30,40]
+list=[10,20,30,40,50,10,20,30,40]
 i=0
 count=0
 search=int(input("Enter the value you want to search:"))

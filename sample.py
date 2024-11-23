@@ -1,7 +1,7 @@
-list=[]
-n=int(input("Enter the number of elements:"))
-for k in range(0,n):
-    ele=int(input("Enter the elements of the list:"))
-    list.append(ele)
-    
-print(list)
+list=[10,30,4,50,35,60]
+min=list[0]
+for i in list:
+    if i<min:
+        min=i
+        
+print(min)
