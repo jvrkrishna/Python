@@ -13,7 +13,7 @@ print(s)
 print(type(s))
 
 #Creation of set with multiple elements:
-s={10,20,30,40,50}
+s={10,20,(30,40),50}  #Set can hold only set elements cannot hold list or dict elements
 print(s)
 print(type(s))
 
@@ -28,7 +28,7 @@ s1=set(l1)
 print(l1)
 print(type(l1))
 
-#Creationm of set from range()
+#Creation of set from range()
 s=set(range(10))
 print(s)
 print(type(s))
