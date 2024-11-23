@@ -26,17 +26,6 @@ L1=[40,{"name":"Ram"},list((10,20,30))]
 print(type(L1))
 print(L1)
 
-#creation of a list by using split()
-a="Welcome to python world"
-print(type(a))
-L1=a.split() 
-print(type(L1))
-print(L1)
-
-a="Welc-ome to pyt-hon wo-rld"
-L2=a.split('-') # based up on('-') by default space
-print(L2)
-
 #Accessing the elements from list
 list = [1,2,3,4,5,6,7]
 print(list[0])
@@ -151,6 +140,16 @@ print(List1)
 # now Add List1 to List2 List2.extend(List1) 
 print(List2)
 
+#creation of a list by using split()
+a="Welcome to python world"
+print(type(a))
+print(a.split()) 
+print(type(a.split()))
+
+
+a="Welc-ome to pyt-hon wo-rld"
+L2=a.split('-') # based up on('-') by default space
+print(L2)
 
 ######Sum Method
 List = [1, 2, 3, 4, 5]
@@ -256,6 +255,19 @@ list=[10,20,40,50,60]
 list.sort(reverse=True)
 for i in list: 
     print(i)   
+    
+#WAP to print the elements in  sort order by using for or while
+# list=[10,50,30,40,20]
+# list.sort()
+# print(list)
+
+list=[10,50,30,40,20]
+for i in range(len(list)):
+    for j in range(i+1,len(list)):
+        if list[i]>list[j]:
+            list[i],list[j]=list[j],list[i]
+
+print(list)
     
  #WAP to print min and max values in the list
 list=[10,30,4,50,35,60]
