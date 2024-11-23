@@ -13,7 +13,7 @@ print(s)
 print(type(s))
 
 #Creation of set with multiple elements:
-s={10,20,(30,40),50}  #Set can hold only set elements cannot hold list or dict elements
+s={10,20,(30,40),50}  #Set can hold only tuple elements cannot hold list,set or dict elements
 print(s)
 print(type(s))
 
