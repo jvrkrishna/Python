@@ -123,3 +123,92 @@
 # #It is used to remove the last inserted item in Dictionary and return that item in tuple format
 # d={1:"Ram",2:"Krishna"}
 # print(d.popitem())
+
+# #Keys Method
+# #It is used to return all the keys of dictionary in list format.
+# d={1:"Ram",2:"Krishna"}
+# print(d.keys())
+
+# for i in d.keys():
+#     print(i)
+    
+# #values Method
+# #It is used to return all the values of a dictionary in list format.
+# d={1:"Ram",2:"Krishna"}
+# print(d.values())
+
+# for i in d.values():
+#     print(i)
+
+# #setdefault Method
+# #Here as an argument we will provide key and value.
+# #It is used to return the value associated with that specified key.
+# #If the key is not available then key and value will be added as new item to the dictionary.
+# d={1:"Ram",2:"Krishna"}
+# print(d.setdefault(111, "Rama Krishna"))
+# print(d)
+
+# print(d.setdefault(2, 'Gopal')) #Key and value will not modified.
+# print(d)
+
+# #Update Mehtod
+# #It is used to add all the items d2 in d1.
+# d1={1:"Ram",2:"Krishna"}
+# d2={3:"Rama Krishna",4:"Gopal"}
+# d1.update(d2)
+# print(d1)
+
+# #If the key of both dict is same then it will be consider the updated one.
+# d1={1:"Ram",2:"Krishna"}
+# d2={2:"Rama Krishna",3:"Gopal"}
+# d1.update(d2)
+# print(d1)
+
+# #copy Method
+# #It is used to copy(Shallow Copy) all the item from one dict to another dict.
+# d1={1:"Ram",2:"Krishna"}
+# d2=d1.copy()
+# print(d1)
+# print(d2)
+# print(id(d1))   #112233
+# print(id(d2))   #112234
+
+# #Both dict are pointing to different memory locations so if we will made any changes on any particular dictionary it will not reflect to another dict.
+
+# d1={1:"Ram",2:"Krishna"}
+# d2=d1   #assign
+# print(d1)
+# print(d2)
+# print(id(d1))  #112233
+# print(id(d2))  #112233
+
+# #clear Method
+# #It is used to remove all the items of a dict but then our dict will become empty.
+# d1={1:"Ram",2:"Krishna"}
+# print(d1)
+# d1.clear()
+# print(d1)
+
+# #fromkeys Method
+# #It is used to create a new dict from given iterable(list, tuple, range etc) and value(it is optional)
+
+# l=[10,20,30]
+# d=dict.fromkeys(l)
+# print(d)
+
+# t=(10,20,30)
+# d=dict.fromkeys(t)
+# print(d)
+
+# r=range(5)
+# d=dict.fromkeys(r)
+# print(d)
+
+# r=range(5)
+# d=dict.fromkeys(r,"Hello")
+# print(d)
+
+r=range(3)
+l=["Ram","Banti","Chanti"]
+d=dict.fromkeys(r, l)
+print(d)
