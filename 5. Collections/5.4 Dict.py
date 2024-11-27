@@ -212,3 +212,72 @@ r=range(3)
 l=["Ram","Banti","Chanti"]
 d=dict.fromkeys(r, l)
 print(d)
+
+
+#Count the No of occurance present inside the string.
+s="Rama"
+d={}
+for i in s:
+    d[i]=d.get(i, 0)+1
+print(d)
+
+for i, j in d.items():
+    print(f'{i} is present {j} times')
+    
+#Add the elements in to dictionary in run time
+d={}
+while True:
+    name=input("Enter your name:")
+    place=input("Enter your place:")
+    d[name]=place
+    choice=input("Do you want to add more candidates [Y/N]:")
+    if choice=="N":
+        break
+    
+#Access the elements from dictionary at run time
+while True:
+    name=input("Enter the name to get the place:")
+    place=d.get(name)
+    print(f"Hi {name} you are from {place}")
+    
+    choice=input("Do you want to search more[Y/N]:")
+    
+    if choice=="N":
+        break
+
+#Dictionary Comprehensions
+d={i:i for i in range(0,5)}
+print(d)
+print(type(d))
+
+d={i:i*i for i in range(0,5)}
+print(d)
+print(type(d))
+
+l=[10,20,30,40]
+d={i:3*i for i in l}
+print(d)
+
+name=["Rama", "Krishna","Gopal"]
+d={i:len(i) for i in name}
+print(d)
+
+#Nested Dictionary
+students={
+1:{"name":"Rama Krishna","place":"Kakinada"},
+2:{"name":"Rajaram","place":"rajahmundry"}
+}
+
+for i,j in students.items():
+    print("student id is : ",i)
+    
+    for k in j:
+        print(f"{k} is: {j[k]}")
+    print('-'*20)
+
+#Merging Dict Elements
+d1={"Name":"Rama"}
+d2={"Place":"Kakinada"}
+
+d3={**d1, **d2}
+print(d3)

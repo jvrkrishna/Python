@@ -256,5 +256,11 @@ fs=frozenset(s)
 fs.add(26) #Error
 fs.remove(20) #Error
 
+#Merging set Elements
+s1={10,20,30,40}
+s2={50,"Rama"}
+#s3=s1+s2 #It will not work in case of set
+#print(s3)
 
-
+s3={*s1, *s2}
+print(s3)
