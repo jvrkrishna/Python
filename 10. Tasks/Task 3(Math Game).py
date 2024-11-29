@@ -68,7 +68,7 @@ else:
     
       
 print("Your Test Result:")
-print(f"   >Scores: {correct}/10 ({correct/10*100} %)")
-print(f"   >Time to complete: {end-begin} seconds")
-print(f"   >Grade : {grade}")
+print(f"   > Scores: {correct}/10 ({correct/10*100} %)")
+print(f"   > Time to complete: {end-begin} seconds")
+print(f"   > Grade : {grade}")
         

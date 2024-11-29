@@ -162,3 +162,11 @@
 # #Center Method
 # s1="Rama"
 # print(s1.center(8))
+
+s1="Rama"
+print(s1.center(12,"*"))
+
+#enumerate method
+s1="Rama"
+for i in enumerate(s1):
+    print(i)
