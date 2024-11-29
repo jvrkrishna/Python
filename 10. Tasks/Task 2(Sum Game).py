@@ -1,7 +1,9 @@
 #sum game with random numbers
+import os
 from random import randint
 count=0
 while True:
+    os.system("cls") #To clear the screen
     a=randint(1,50)
     b=randint(1,50)
     c=a+b
@@ -29,11 +31,12 @@ while True:
             print("Please Enter the numbers only")
         
     if your_answer==correct_answer:
-        print("Correct. Please Enter to continue...")
+        print("Correct. Press Enter to continue...")
         count=count+1
         input() #pause the program wait for Enter.
     else:
         print("Not Correct.")
         break
+
 
 print(f"You have answered {count} questions Correctly")
