@@ -259,7 +259,30 @@ smith
 nick'''
 
 
+# * and ** in function call
 
+#Example:
+def sample(a,b,c):
+    print(a,b,c)
 
+l=[10,20,30]  #This list a one element
+sample(l)     #error sample() missing 2 required positional arguments: 'b' and 'c'
 
+#Example:
+def sample(a,b,c):
+    print(a,b,c)
+    
+s={10,20,30}    
+t=(10,20,30)
+l=[10,20,30]
+sample(*l)     # 10 20 30
+sample(*s)     # 10 20 30
+sample(*t)     # 10 20 30
+
+#Example
+def sample(**s):
+    print(s)
+    
+d={'a':'10','b':'20','c':'30'}    
+sample(**d)
 
