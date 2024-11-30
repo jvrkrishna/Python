@@ -56,3 +56,20 @@ def add(a,b):     # parameters / Formal arguments
     print(a+b)
     
 add(10,20)   # arguments / actual arguments
+
+###Call By Value or Call By reference
+'''If we made any chages on called function it will not reflect on outside the function when we call with value.'''
+
+def sample(a):   #Called function
+    print("Inside the function before Modification:",a)  #23
+    print("Inside the function before Modification:",id(a))  #140706834615416
+    a=100
+    print("Inside the function before Modification:",a)  #100
+    print("Inside the function before Modification:",id(a))  #140706834617880
+
+a=23
+print("Outside the function before calling:",a)  #23
+print("Outside the function before calling:",id(a))  #140706834615416
+sample(a)  #Calling Function
+print("Outside the function after calling:",a)  #23
+print("Outside the function after calling:",id(a))  #140706834615416
