@@ -117,3 +117,94 @@ def add():
     return list
 
 print(add()) 
+
+#Example:
+def sample():
+    print("Hello")
+
+print(sample())   #Hello   None
+
+#Example:
+def sample():
+    print("Hello")
+    return 10
+
+print(sample())   #Hello   10   #return replace None value
+
+'''return statement only be at end of the function. If we give return statement in the middle after return statement remaining statement will not going to be executed.'''
+#Python function can return multiple values.
+def sample(a,b,c):
+    return a,b,c
+
+print(sample(10,20,30))
+
+
+##### Types of Arguments #####
+'''There may be several types of arguments which can be passed at the time of function calling.
+•	Default arguments
+•	Keyword arguments
+•	Required or positional arguments
+•	Variable-length arguments'''
+ 
+#1. Positional Arguments:
+'''Required arguments are the arguments passed to a function in correct positional order. Here, the number of arguments in the function call should match exactly with the function definition.'''
+
+#Example:
+def sample(a,b,c):
+    return a,b,c
+
+print(sample(10,20)) #error because there are no sufficient required arguments on calling
+
+#Example:
+def sample(a,b):
+    return "Name is:",a, "My age is:",b
+
+print(sample(30, "Rama Krishna")) #These are not in correct position
+
+#2. Keyword Arguments:
+'''Python allows us to call the function with the keyword arguments. This kind of function call will enable us to pass the arguments in the random order.'''
+#Example:
+def sai(name,age,dep):
+    print("Name:",name)
+    print("Age:",age)
+    print("Department:",dep)
+
+sai("sairam",age=30,dep=120)
+
+#Example:
+def func(name1,message,name2):  
+    print("printing the message with",name1,",",message,",and",name2)  
+func("John",message="hello","David") #error positional argument follows keyword argument
+
+#Positional argument cannot appear after keyword arguments
+
+#Default arguments
+'''While defining a function, we can initialize some of the arguments using default values. Passing default value to parameter is optional.
+If we pass value to default argument, existing value will be replaced.'''
+
+#Example:
+def sample(a,b,c=30): #Here c is default argument
+    print("Value of a is:",a,"The value of b is:",b,"The value of c is:",c)
+sample(10,20)
+
+#Example:
+def sample(a,b,c=30): #Here c is default argument
+    print("Value of a is:",a,"The value of b is:",b,"The value of c is:",c)
+sample(10,20,40) #Here default argument modifies
+
+#Example:
+def sample(name,age=30): #Here age is default argument
+    print(name,age)
+sample(name="Rama Krishna")
+
+#Example:
+def sample(name,age=30): #Here age is default argument
+    print(name,age)
+sample(name="Rama Krishna") 
+sample(age=25,name="Rama Krishna")
+sample(25,"Rama Krishna")
+
+
+
+
+
