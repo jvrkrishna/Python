@@ -205,6 +205,61 @@ sample(age=25,name="Rama Krishna")
 sample(25,"Rama Krishna")
 
 
+###Variable-Length Arguments:
+'''In the large projects, sometimes we may not know the number of arguments to be passed in advance. In such cases, Python provides us the flexibility to provide the comma separated values which are internally treated as tuples at the function call.
+However, at the function definition, we have to define  *variable-name .
+•	Non–Keyworded Arguments (*args)
+•	Keyworded Arguments (**kwargs)'''
+
+#Example:
+def variableargs(a):
+	print(a)
+	
+variableargs(10)
+
+#Example:
+def variableargs(a):
+	print(a)
+	
+variableargs(10,20) # it gives an error because we declared one parameter but we passed two values.
+
+#Example:
+def variableargs(*a):
+	print(a)
+	
+variableargs(10,35.2,"pyton") #it will executes because we take it is a pointer like tuple.
+variableargs(name="Rama",age=24)#it gives an error beacue it is in dictinary format.
+
+#Example:
+def variableargs(**a):
+	print(a)
+variableargs(name="Rama",age=24)      #** accepts dictinary format.
+
+#Example:
+def variableargs(*a):
+    print("Elements are:")
+    for z in a:
+        print(z)
+ 
+variableargs(10,20,30,40)
+
+#Example
+def printme(*names):  
+    print("type of passed argument is ",type(names))  
+    print("printing the passed arguments...")  
+    for name in names:  
+        print(name)  
+printme("john","David","smith","nick")  
+'''Output:
+type of passed argument is  <class 'tuple'>
+printing the passed arguments...
+john
+David
+smith
+nick'''
+
+
+
 
 
 
