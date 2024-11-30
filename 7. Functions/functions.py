@@ -94,3 +94,26 @@ print("Outside the function after calling:",id(a))  #2063865878784
 
 ###NOTE:
 '''Python does not support Call by value or Call by reference it support by call by object reference. When we pass immutable objects like int,float, tuple it acts like call by value (i.e., modify that object and create new object.) and when we pass mutable objects like list, dictionary it acts like call by reference (i.e., modify that object and will not create new object.).'''
+
+
+##### return vs print
+'''In functions internally return a value by default as None'''
+#Example:
+def add(a):
+    print(a)
+
+print(add(10))  #Here it will return None because we not returning any thing.  10  None
+
+#Example
+def add(a):
+    print(a)
+    return a-5
+
+print(add(10))  #10  5
+
+#Example
+def add():
+    list=[10,20,30]
+    return list
+
+print(add()) 
