@@ -1,2 +1,3 @@
-d={1:"Rama",2:"Krishna",3:"Gopal",4:"Rambabu"}
-print(list(filter(lambda i:i[0]%2==0,d.items())))
+a=[10,20,30,40,50]
+b=[1,2,3,4,5,6]
+print(list(map(lambda i,j:i+j,a,b)))
