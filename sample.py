@@ -1,3 +1,7 @@
-a=[10,20,30,40,50]
-b=[1,2,3,4,5,6]
-print(list(map(lambda i,j:i+j,a,b)))
+from functools import reduce
+d=reduce(lambda a,b:a+b,[2,3,4,5])
+print(d)
+
+from itertools import accumulate
+e=list(accumulate([2,3,4,5],lambda a,b:a+b))
+print(e)
