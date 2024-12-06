@@ -23,10 +23,10 @@ else:
 
 #sample program
 user="ram"
-passs="Ram@123"
+pass="Ram@123"
 user_name=input("Enter the User Name:")
 password=input("Enter the Password:")
-if user==user_name and passs==password:
+if user==user_name and pass==password:
     print("Success")
 else:
     print("Try again")
