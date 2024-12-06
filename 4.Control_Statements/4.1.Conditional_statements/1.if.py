@@ -1,13 +1,6 @@
 if 5>2:
     print("This is if")
 
-# Write a program to print even or odd
-num=int(input("Enter the number:"))
-if num%2==0:
-    print("The given number is Even")
-else:
-    print("The given number is odd")
-
 # Write a program to print largest number
 a=int(input("Enter a value:"))
 b=int(input("Enter b value:"))

@@ -13,6 +13,13 @@ elif b>c:
     print("b is big")
 else:
     print("c is big")
+    
+# Write a program to print even or odd
+num=int(input("Enter the number:"))
+if num%2==0:
+    print("The given number is Even")
+else:
+    print("The given number is odd")
 
 #write a Program to check whether a person is eligible to vote or not.
 age = int (input("Enter your age:"))
