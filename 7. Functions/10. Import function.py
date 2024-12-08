@@ -8,5 +8,5 @@ def sub(a,b):
     print(a-b)
 
 # anothersample.py
-from sample import add,sub
+from Python.sample2 import add,sub
 add(10,20)

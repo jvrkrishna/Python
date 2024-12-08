@@ -30,12 +30,12 @@ def sub(a,b):
 
 #sample2.py
 #Here we are importing add function from sample module
-from sample import add 
+from Python.sample2 import add 
 add(10,20)
 
 #Here we are importing complete sample module i.e., all functions, variables all what ever
-import sample  
-sample.sub(10,20)
+import Python.sample2 as sample2  
+sample2.sub(10,20)
 
 #3.	3rd party Modules:
 '''These modules provided by 3rd party vendor, it is available on internet so we have to download it by using pip (i.e., pip install numpy) we cannot directly proceed with import.
