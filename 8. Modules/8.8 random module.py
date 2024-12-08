@@ -1,0 +1,1 @@
+#If we want to generate random values then we use random module.
