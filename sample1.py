@@ -1,0 +1,2 @@
+import sample 
+dir(sample)
