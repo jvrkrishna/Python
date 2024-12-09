@@ -48,7 +48,7 @@ If n is even and greater than 20, print Not Weird'''
 n=int(input("Enter n value:").strip()) #Here strip() removes before and after spaces
 if n%2 !=0:
     print("Weird")
-elif n%2==0 and range(2,5):
+elif n%2==0 and n in range(2,5):
     print("Not Weird")
 elif n%2==0 and 6<n<=20:
     print("Weird")

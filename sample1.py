@@ -1,8 +1,8 @@
-def add(a,b):
-    print(a+b)
+a=10
+b=20
+# if a>b: print("a is greater than b")
 
-if __name__=='__main__':
-    add(10,20)
-else:
-    print("add() is not direct execution.")
     
+# if a>b: print("a is greater than b")
+
+print("a is greater than b") if a>b else print("a is not greater than b")
