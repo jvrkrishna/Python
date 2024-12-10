@@ -2,11 +2,11 @@
 from random import *
 alpha="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
 
-example=''
+fname=''
 for i in range(randint(3,13)):  #password in the range of 3 to 13 chars
-    example=example+choice(alpha)
+    fname=fname+choice(alpha)
     
-print(example)
+print(fname)
 
 #WAP to print the names in different patterns
 from random import *
@@ -14,11 +14,11 @@ alpha="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
 
 
 for i in range(200):
-    example=''
-    for i in range(randint(5,12)):  #password in the range of 3 to 13 chars
-        example=example+choice(alpha)
+    fname=''
+    for i in range(randint(5,12)):  #names in the range of 3 to 13 chars
+        fname=fname+choice(alpha)
     
-    print(example)
+    print(fname)
     
 
 #WAP to print the names in different patterns of 50 names
@@ -27,11 +27,11 @@ alpha="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
 
 
 for i in range(50):
-    example=''
+    fname=''
     for i in range(randint(5,12)):  #password in the range of 3 to 13 chars
-        example=example+choice(alpha)
+        fname=fname+choice(alpha)
     
-    print(example)
+    print(fname)
     
 #WAP to print the mobile 
 numbers="9876543210"
