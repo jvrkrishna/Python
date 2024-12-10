@@ -1,5 +1,5 @@
-################ MANUAL Process ##################
-#Create 3 to 13 char password that must contain only alphabets. 
+################ MANUAL Process without faker module ##################
+#Create 3 to 13 char name that must contain only alphabets. 
 from random import *
 alpha="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
 
@@ -67,4 +67,23 @@ for i in range(20):
     address=choice(cities)
     print(address)
     
-############# Automation with Modules ############
+############# Automation with faker Modules ############
+from faker import Faker    
+fk=Faker()
+
+print("Name:",fk.name())
+print("Email:",fk.email())
+print("Address:",fk.address())
+print("Country: ", fk.country())
+print("Website:", fk.url())
+print("Message:",fk.text())
+print("Name:",fk.file_name(), fk.last_name())
+print("Time:",fk.time(), fk.am_pm())
+print("Mobile No:",fk.phone_number())
+
+print("My profile is:",fk.profile())
+
+#Faker.seed(1)  #This is used to freeze one output without changing this faker.seed(1) is use before from which line we want to freeze 
+
+fk=Faker('hi-IN')
+print(fk.name())
