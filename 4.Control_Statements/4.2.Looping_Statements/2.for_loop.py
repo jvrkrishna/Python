@@ -31,11 +31,12 @@
 
 # SAMPLE PROGRAM
 # QUESTION:
-The included code stub will read an integer, , from STDIN.
+'''The included code stub will read an integer, , from STDIN.
 Without using any string methods, try to print the following:
-Note that "" represents the consecutive values in between.
+Note that "" represents the consecutive values in between.'''
 
-Example
+#Example
+'''
 Print the string .
 
 Input Format
@@ -50,6 +51,7 @@ Sample Input 0
 
 Sample Output 0
 123
+'''
 
 # Output:
 if __name__ == '__main__':
