@@ -6,7 +6,19 @@ special_symbols="~!@#$%^&*(_+=-{}[];/.><,:'"
 
 print(random.choice(alpha),random.choice(digits),random.choice(special_symbols))
 
+#Example:
+import random
+alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+digits="0123456789"
+special_symbols="~!@#$%^&*(_+=-{}[];/.><,:'"
+
 print(random.choice(alpha+digits+special_symbols),random.choice(digits+digits+special_symbols),random.choice(special_symbols+digits+special_symbols))
+
+#Example:
+import random
+alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+digits="0123456789"
+special_symbols="~!@#$%^&*(_+=-{}[];/.><,:'"
 
 from random import randrange
 for i in range(randrange(1,2)):
