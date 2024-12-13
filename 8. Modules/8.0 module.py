@@ -30,11 +30,11 @@ def sub(a,b):
 
 #sample2.py
 #Here we are importing add function from sample module
-from Python.sample2 import add 
+from Python.sample1 import add 
 add(10,20)
 
 #Here we are importing complete sample module i.e., all functions, variables all what ever
-import Python.sample2 as sample2  
+import Python.sample1 as sample2  
 sample2.sub(10,20)
 
 #3.	3rd party Modules:
