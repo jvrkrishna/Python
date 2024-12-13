@@ -22,7 +22,7 @@ num=int(input('Enter n value:'))
 start = 2
 for i in range(start, num+1):
     count = 0
-    for j in range(2, i):
+    for j in range(start, i):
         if i%j == 0:
             count = 1
             break
