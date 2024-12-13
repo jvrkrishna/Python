@@ -10,3 +10,11 @@ y = temp
 print(f'The value of x after swapping: {x}')
 print(f'The value of y after swapping: {y}')
 
+#Swap of two numbers Without Using Temporary Variable
+x = 5
+y = 10
+
+x, y = y, x
+print("x =", x)
+print("y =", y)
+
