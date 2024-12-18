@@ -23,14 +23,6 @@
 #     print("%d X %d = %d"%(n,i,n*i))  #print(f'{n} * {i} = {n*i}')
 #     i=i+1
 
-
-
-# #Write a program to print infinite loop
-# var = 1
-# while var != 2:
-#     i = int(input("Enter the number?"))
-#     print ("Entered value is %d"%(i))
-
 # #Using else with while loop
 # i=int(input("Enter n Value:"))
 # while i<=5:

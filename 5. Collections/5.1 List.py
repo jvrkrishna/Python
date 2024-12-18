@@ -1,6 +1,6 @@
 '''List a collection of elements with various data types. It is mutable mean we can change 
 the values after creation of list also. List with [] brackets.'''
-
+############################## 1. Creation #########################
 #Creation of a list
 L1=[]
 L2 = ["John", 102, 'USA',10,"20"]
@@ -26,6 +26,7 @@ L1=[40,{"name":"Ram"},list((10,20,30))]
 print(type(L1))
 print(L1)
 
+##################### 2. Access ############################
 #Accessing the elements from list
 list = [1,2,3,4,5,6,7]
 print(list[0])
@@ -47,13 +48,6 @@ print(list2[-3:])
 print(list2[:-1])
 print(list2[-3:-1])
 
-#########updating the list Elements###############
-L1=[1,2,3,4,10,20,30]
-L1[2]=30
-print(L1)
-L1[2:4]=30,40
-print(L1)
-
 ########### Iterating the list#################
 #Visiting all the elements in a sequence is called Traversing
 list = ["John", "David", "James", "Jonathan"]
@@ -66,6 +60,19 @@ while i<len(list):
     print(list[i])
     i=i+1
     
+############ Visiting the elements in a sequence and print the particular index
+list=[3,4,5,"Ram",1,"Gopal",8]
+for i in list:
+    if i==3:
+        print(list[i])
+
+list=[3,4,5,"Ram",1,"Gopal",8]
+i=0
+while i<len(list):
+    if i==3:
+        print(list[i])
+    i=i+1
+
 ###WAP to display list elements of a list along with positive and negative index.###
 list=[10,20,30]
 n=len(list)
@@ -86,6 +93,13 @@ while i<n:
     print(i, list[i],n-i)
     i=i+1
     
+#########3. updating the list Elements###############
+L1=[1,2,3,4,10,20,30]
+L1[2]=30
+print(L1)
+L1[2:4]=30,40
+print(L1)
+
 ################### Using methods on list ######################
 #####Append Method(Add at end)##Drawback we cannot add at Specified loction-
 list=[1,2,3]
