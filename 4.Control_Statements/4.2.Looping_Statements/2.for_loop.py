@@ -75,3 +75,14 @@ def hide_char():
     print(hidden_string)
 
 hide_char()
+
+# No of iterations is known then we can use for loop   
+n=0
+for i in range(10):
+    print(i)
+
+# No of iteration is not known then we can use while
+i=0   
+while True:
+    print(i)
+    i=i+1
