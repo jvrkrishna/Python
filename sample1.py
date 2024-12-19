@@ -1,5 +1,4 @@
-a="Krishna"
-n=len(a)
-for i in range(0,n,2):
-    print(a[i])
-    
+#WAP to print the table   5 * 1 = 5
+no=int(input("Enter the no value:"))
+for i in range(1,13):
+    print(f"{no} * {i} = {no*i}")
