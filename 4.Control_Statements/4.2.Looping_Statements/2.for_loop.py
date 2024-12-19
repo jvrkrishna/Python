@@ -14,10 +14,16 @@
 # for i in range(n):
 #     print(i)
 
-
+#WAP to print the characters from a string
 # for i in "Rama Krishna":
 #     print(i)
 
+#WAP to print the skipping characters from a string
+# a="Krishna"
+# n=len(a)
+# for i in range(0,n,2):
+#     print(a[i])
+    
 
 # fruits = ["apple", "banana", "cherry"]
 # for x in fruits:
