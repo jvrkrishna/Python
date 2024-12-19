@@ -2,7 +2,7 @@
 #     pass
 
 for letter in "python":
-               if letter=="k":
+               if letter=="t":
                    pass
                print("This is pass block")
                print ("Current Letter :", letter)
