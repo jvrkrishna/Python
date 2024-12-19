@@ -4,11 +4,9 @@ the values after creation of list also. List with [] brackets.'''
 #Creation of a list
 L1=[]
 L2 = ["John", 102, 'USA',10,"20"]
-L3 = [1, 2, 3, 4, 5, 6]
 L4=list([1,"Ram"]) #in this case we can use [],{}() ---inside brackets
 print(type(L1))
 print(type(L2))
-print(type(L3))
 print(L1)
 
 #Creation of list Dynamically by using eval() function.
@@ -60,7 +58,7 @@ while i<len(list):
     print(list[i])
     i=i+1
     
-############ Visiting the elements in a sequence and print the particular index
+# Visiting the elements in a sequence and print the particular index
 list=[3,4,5,"Ram",1,"Gopal",8]
 for i in list:
     if i==3:
@@ -98,6 +96,13 @@ L1=[1,2,3,4,10,20,30]
 L1[2]=30
 print(L1)
 L1[2:4]=30,40
+print(L1)
+
+#Update the list by using list
+L1=[1,2,3,4,10,20,30]
+for i in range(3,6):
+    ele=int(input("Enter the elements of the list:"))
+    L1.insert(i,ele)
 print(L1)
 
 ################### Using methods on list ######################
