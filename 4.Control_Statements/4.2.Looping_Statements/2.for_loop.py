@@ -76,6 +76,15 @@ def hide_char():
 
 hide_char()
 
+#WAP to print string by skipping some element by using continue      
+def hide_char():
+    name="Rama"
+    for i in name:
+        if i=="a":
+            continue
+        print(i,end="")
+hide_char()
+
 # No of iterations is known then we can use for loop   
 n=0
 for i in range(10):
