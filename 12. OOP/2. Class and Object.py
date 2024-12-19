@@ -75,7 +75,7 @@ class Student:
     def details(self):
         print(f"My name is {self.n} and my age is {self.a}")
         
-s1=Student("gopal",30)  #At the time of object creation constructor will execute auto
+s1=Student("gopal",30)  #At the time of object creation __init__ constructor will execute auto
 s1.details()
 
 #For Explanation refer the image Class_object Image in Images folder
