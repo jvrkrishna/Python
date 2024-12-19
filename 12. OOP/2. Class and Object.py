@@ -78,4 +78,19 @@ class Student:
 s1=Student("gopal",30)  #At the time of object creation __init__ constructor will execute auto
 s1.details()
 
-#For Explanation refer the image Class_object Image in Images folder
+#For Explanation refer the image "Class_object Image" in Images folder
+
+#Example 4: print the details with different methods
+class Student:
+    def __init__(self,name,age):   #Here __init__ is constructor
+        self.n=name
+        self.a=age
+    def My_name(self):
+        print(f"My name is {self.n}")
+        
+    def My_age(self):
+        print(f"My age is {self.a}")
+        
+s1=Student("gopal",30)  #At the time of object creation __init__ constructor will execute auto
+s1.My_name()
+s1.My_age()
