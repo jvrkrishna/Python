@@ -59,9 +59,9 @@ while i<len(list):
     i=i+1
     
 # Visiting the elements in a sequence and print the particular index
-list=[3,4,5,"Ram",1,"Gopal",8]
-for i in list:
-    if i==3:
+list=[30,40,50,"Ram",1,"Gopal",80]
+for i in range(len(list)):
+    if i==2:
         print(list[i])
 
 list=[3,4,5,"Ram",1,"Gopal",8]
