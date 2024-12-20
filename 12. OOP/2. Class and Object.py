@@ -67,6 +67,11 @@ s1=Student()
 print(s1.marks)
 s1.sample("Gopal",30)
 
+#All classes have a function called __init__(), which is always executed when the class is being initiated.
+#Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created
+#Here no need to call with object (app.__init__(10)). It will execute directly when object created.
+#Here init is a constructor as well as method 
+
 #Example 3
 class Student:
     def __init__(self,name,age):   #Here __init__ is constructor
@@ -82,7 +87,7 @@ s1.details()
 
 #Example 4: print the details with different methods
 class Student:
-    def __init__(self,name,age):   #Here __init__ is constructor
+    def __init__(self,name,age):
         self.n=name
         self.a=age
     def My_name(self):
@@ -91,6 +96,6 @@ class Student:
     def My_age(self):
         print(f"My age is {self.a}")
         
-s1=Student("gopal",30)  #At the time of object creation __init__ constructor will execute auto
+s1=Student("gopal",30)
 s1.My_name()
 s1.My_age()
