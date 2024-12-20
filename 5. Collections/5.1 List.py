@@ -164,6 +164,15 @@ print(count)
 List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
 print(List.index(2))
 
+######index method by iter to know all indices
+List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
+indices=[]
+n=int(input("Enter the reqired element:"))
+for i in range(len(List)):
+    if List[i]==n:
+        indices.append(i)
+print(f"All indices of 10: {indices}")
+
 #######pop Method used to delete element by index by default last element if we not mention index
 List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
 print(List.pop()) #By default last element
@@ -172,11 +181,19 @@ print(List)
 print(List.pop(3))
 print(List) #By index number
 
+#######pop using iter (Here iter is not useful it is directly popping the index but we can try)
+List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
+n=int(input("Enter the reqired pop index:"))
+for i in List:
+    List.pop(n)
+    break
+print(f"Popped element: {n}")
+print("Updated List:", List)
+
 #######extend method (Used to extend the list or add a sublist)
 list=[1,2,3]
 list.extend([4])  #we cannot process this extend as sublist
 print(list)
-
 
 List1 = [1, 2, 3]
 List2 = [2, 3, 4, 5]
