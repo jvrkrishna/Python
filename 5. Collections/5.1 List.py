@@ -98,15 +98,16 @@ print(L1)
 L1[2:4]=30,40
 print(L1)
 
-#Update the list by using list
+#Update the list by using Iter method
 L1=[1,2,3,4,10,20,30]
 for i in range(3,6):
-    ele=int(input("Enter the elements of the list:"))
+    #ele=int(input(f"Enter the {i} elements of the list:")) #for single element like 10
+    ele=eval(input(f"Enter the {i} elements of the list:")) #for multi elements like 10,20
     L1.insert(i,ele)
 print(L1)
 
 ################### Using methods on list ######################
-#####Append Method(Add at end)##Drawback we cannot add at Specified loction-
+####Append Method(Add at end)##Drawback we cannot add at Specified location-
 list=[1,2,3]
 list.append(4)  #To add as sub list use list.append([4])
 print(list)
@@ -115,8 +116,8 @@ print(list)
 list=[]
 n=int(input("Enter the number of elements:"))
 for k in range(0,n):
-    ele=int(input("Enter the elements of the list:"))
-    list.append(ele)
+    ele=int(input(f"Enter the {k} element of the list:"))
+    list.append(ele)  
     
 print(list)
 
@@ -136,6 +137,14 @@ l1.insert(20,84)  #insert at end because there are no such indexes
 print(l1)
 l1.insert(-34,88) #insert at start because there are no such indexes
 print(l1)
+
+#Update the list by using insert & Iter method
+L1=[1,2,3,4,10,20,30]
+for i in range(3,6):
+    #ele=int(input(f"Enter the {i} elements of the list:")) #for single element like 10
+    ele=eval(input(f"Enter the {i} elements of the list:")) #for multi elements like 10,20
+    L1.insert(i,ele)
+print(L1)
 
 #######Count Method(Used to count how many times the element is present)
 List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
