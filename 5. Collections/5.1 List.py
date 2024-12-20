@@ -150,6 +150,16 @@ print(L1)
 List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
 print(List.count(1)) 
 
+#####If we want to count multiple values then we go for iter
+list=[10,20,30,40,10,30,56,45,10]
+n=int(input("Enter the reqired element:"))
+count=0
+for i in range(len(list)):
+    if list[i]==n:
+        count=count+1
+
+print(count)
+
 ######Index Method(Used to know the index number of specific element)
 List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
 print(List.index(2))
