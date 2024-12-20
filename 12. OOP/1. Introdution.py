@@ -27,40 +27,69 @@ Python collects object-oriented mechanism from c++
 
 #Difference between POP and OOP
 #POP Calculator Example:
+# Functions to perform basic arithmetic operations
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Error! Division by zero."
+    return a / b
+
+# Example usage of the functions
+a = 10
+b = 5
+
+# Calling the functions directly
+print(f"{a} + {b} = {add(a, b)}")
+print(f"{a} - {b} = {subtract(a, b)}")
+print(f"{a} * {b} = {multiply(a, b)}")
+print(f"{a} / {b} = {divide(a, b)}")
+
+
 
 #OOP Calculator Example:
+# Defining a Calculator class with methods for operations
 class Calculator:
-    def add(self, x, y):
-        return x + y
+    def __init__(self):
+        self.result = 0  # Store the result of calculations
+    
+    def add(self, a, b):
+        self.result = a + b
+        return self.result
+    
+    def subtract(self, a, b):
+        self.result = a - b
+        return self.result
+    
+    def multiply(self, a, b):
+        self.result = a * b
+        return self.result
+    
+    def divide(self, a, b):
+        if b == 0:
+            return "Error! Division by zero."
+        self.result = a / b
+        return self.result
+    
+    def get_result(self):
+        return self.result
 
-    def subtract(self, x, y):
-        return x - y
+# Example usage of the Calculator class
+calc = Calculator()
 
-    def multiply(self, x, y):
-        return x * y
-
-    def divide(self, x, y):
-        if y != 0:
-            return x / y
-        else:
-            return ("Cannot divide by zero.")
-
-# Create an instance of the Calculator class
-calculator = Calculator()
-
-# Perform Diffrent operations and print the result
-result = calculator.add(7, 5)
-print("7 + 5 =", result)
-
-result = calculator.subtract(34, 21)
-print("34 - 21 =", result)
-
-result = calculator.multiply(54, 2)
-print("54 * 2 =", result)
-
-result = calculator.divide(144, 2)
-print("144 / 2 =", result)
-
-result = calculator.divide(45, 0)
-print("45 / 0 =", result)
+# Performing operations using the Calculator object
+a = 10
+b = 5
+print(f"{a} + {b} = {calc.add(a, b)}")
+print(f"{a} - {b} = {calc.subtract(a, b)}")
+print(f"{a} * {b} = {calc.multiply(a, b)}")
+print(f"{a} / {b} = {calc.divide(a, b)}")
+print(f"Current result is: {calc.get_result()}")
 
