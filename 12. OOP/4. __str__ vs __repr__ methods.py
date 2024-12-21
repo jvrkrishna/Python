@@ -48,7 +48,7 @@ print(s1)
 
 '''
 Note:
-    If both methods are defined and if we call print() on this case python will use only __str__ method. If __str__ not present the only it fall back to __repr__ method.
+    If both methods are defined and if we call print() on this case python will use only __str__ method. If __str__ not present then only it fall back to __repr__ method.
 '''
 
 #############using both __str__ and __repr__ #################################################

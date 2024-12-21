@@ -38,7 +38,7 @@ print(p2.__dict__)
 
 #Note:
 '''
--If the values of the variable is differ then we can proceed with Instance variable like(Name and age)because they differ on every object. So,Instance b=variable is a object level variable.
+-If the values of the variable is differ then we can proceed with Instance variable like(Name and age)because they differ on every object. So,Instance variable is a object level variable.
 -If the values of the variable is not differ then we can't use instance variable like (school_name)
 '''
 
