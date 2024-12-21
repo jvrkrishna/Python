@@ -56,3 +56,54 @@ p1.age=30   #instance variable outside the class
 print(p1.__dict__)
 
 ######## Accessing and deleting the Instance variable ###########
+#Accessing the instance variable inside the class 
+#Example:
+class Person:
+    def __init__(self,name,age):
+        self.name=name 
+        self.age=age   
+        print(f"My name is {self.name} and my age is {self.age}")
+p1=Person("Ram",30)
+
+#Accessing the instance variable outside the class 
+#Example:
+class Person:
+    def __init__(self,name,age):
+        self.name=name 
+        self.age=age   
+p1=Person("Ram",30)
+print(f"My name is {p1.name} and my age is {p1.age}")
+
+#Delete the instance variable inside the class
+#Example:
+class Person:
+    def __init__(self,name,age):
+        self.name=name 
+        self.age=age  
+    def deleteDetails(self):
+        del self.age 
+p1=Person("Ram",30)
+print(p1.__dict__)
+
+p1.deleteDetails()
+print(p1.__dict__)
+
+#Example:
+class Person:
+    def __init__(self,name,age):
+        self.name=name 
+        self.age=age  
+        del self.age  #inside the class and inside the constructor
+p1=Person("Ram",30)
+print(p1.__dict__)
+
+#Deleteion outside the class
+class Person:
+    def __init__(self,name,age):
+        self.name=name 
+        self.age=age  
+p1=Person("Ram",30)
+print(p1.__dict__)
+
+del p1.age
+print(p1.__dict__)
