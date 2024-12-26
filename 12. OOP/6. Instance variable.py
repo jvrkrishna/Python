@@ -39,7 +39,7 @@ print(p2.__dict__)
 #Note:
 '''
 -If the values of the variable is differ then we can proceed with Instance variable like(Name and age)because they differ on every object. So,Instance variable is a object level variable.
--If the values of the variable is not differ then we can't use instance variable like (school_name)
+-If the values of the variable is not differ then we can't use instance variable we can use only static variables like(school_name)
 '''
 
 #In the above we have seen Instance variable creation inside the class. Now we are going to create instance variable outside the class.
