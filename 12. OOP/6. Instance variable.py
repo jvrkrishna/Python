@@ -97,7 +97,7 @@ class Person:
 p1=Person("Ram",30)
 print(p1.__dict__)
 
-#Deleteion outside the class
+#Deletion outside the class
 class Person:
     def __init__(self,name,age):
         self.name=name 
