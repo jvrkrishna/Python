@@ -76,3 +76,170 @@ class Person:
 #Here in this case no need to create object we directly call class methods with class name reference.
 Person.static_method()
 print(Person.__dict__)
+
+
+###Accessing static variable in different places
+#1. Outside the class
+class Person:
+    school_name="Sri Chaitanya"
+
+print(Person.school_name)
+
+#2. Inside the constructor
+class Person:
+    school_name="Sri Chaitanya"
+    
+    def __init__(self):
+        print(Person.school_name)
+
+p1=Person()
+
+#3. Inside the Instance method
+class Person:
+    school_name="Sri Chaitanya"
+    
+    def details(self):
+        print(Person.school_name)
+
+p1=Person()
+p1.details()
+
+#4. Inside class method
+class Person:
+    school_name="Sri Chaitanya"
+    @classmethod
+    def class_method(cls):
+        print(Person.school_name)
+        
+Person.class_method()
+
+#5. Inside static Method
+class Person:
+    school_name="Sri Chaitanya"
+    @staticmethod
+    def static_method():
+        print(Person.school_name)
+        
+Person.static_method()
+
+###Modifying static  variable in different places
+#1. Outside of the class
+class Person:
+    school_name="Sri Chaitanya"
+        
+print(Person.school_name)
+Person.school_name="Mod Sri Chaitanya"
+print(Person.school_name)
+
+#2. Inside the constructor
+class Person:
+    school_name="Sri Chaitanya"
+    def __init__(self):
+        Person.school_name="Mod Sri Chaitanya"
+        
+print(Person.school_name)
+p1=Person()
+print(Person.school_name)
+
+#3. Inside instance method
+class Person:
+    school_name="Sri Chaitanya"
+    def details(self):
+        Person.school_name="Mod Sri Chaitanya"
+        
+print(Person.school_name)
+p1=Person()
+p1.details()
+print(Person.school_name)
+
+#4. Inside class method
+class Person:
+    school_name="Sri Chaitanya"
+    
+    @classmethod
+    def class_method(cls):
+        Person.school_name="Mod Sri Chaitanya"
+        
+print(Person.school_name)
+p1=Person()
+p1.class_method()
+print(Person.school_name)
+
+#5. Inside static method
+class Person:
+    school_name="Sri Chaitanya"
+    
+    @staticmethod
+    def static_method():
+        Person.school_name="Mod Sri Chaitanya"
+        
+print(Person.school_name)
+p1=Person()
+p1.static_method()
+print(Person.school_name)
+
+###Deletion static variable in different places
+#1. Outside the class
+class Person:
+    school_name="Sri Chaitanya"
+        
+print(Person.__dict__)
+
+del Person.school_name
+print(Person.__dict__)
+
+#2. Inside the class
+class Person:
+    school_name="Sri Chaitanya"
+    del school_name
+        
+print(Person.__dict__)
+
+#3. Inside the Constructor
+class Person:
+    school_name="Sri Chaitanya"
+    def __init__(self):
+        del Person.school_name
+        
+print(Person.__dict__)
+
+p1=Person()
+print(Person.__dict__)
+
+#4. Inside the instance method
+class Person:
+    school_name="Sri Chaitanya"
+    def details(self):
+        del Person.school_name
+        
+print(Person.__dict__)
+
+p1=Person()
+p1.details()
+print(Person.__dict__)
+
+#5. Inside the class method
+class Person:
+    school_name="Sri Chaitanya"
+    
+    @classmethod
+    def class_method(cls):
+        del Person.school_name
+        
+print(Person.__dict__)
+Person.class_method()
+print(Person.__dict__)
+
+#6. Inside the static method
+class Person:
+    school_name="Sri Chaitanya"
+    
+    @staticmethod
+    def static_method():
+        del Person.school_name
+        
+print(Person.__dict__)
+Person.static_method()
+print(Person.__dict__)
+
+
