@@ -3,9 +3,10 @@
 Instance variables are variables that belong to a specific instance (object) of a class.
 '''
 
-#Example:
+#########Creation of Instance varaibles#############
+#Example 1: Create a variable inside the constructor
 class Person:
-    def __init__(self,name,age):
+    def __init__(self,name,age):   #constructor
         self.name=name #instance variable
         self.age=age   #instance variable
         
@@ -15,14 +16,12 @@ p2=Person("gopal",25) #p2 is one instance
 print(p1.__dict__)
 print(p2.__dict__)
 
-#Example:
+#Example 2:Create a variable inside the instance method
 class Person:
-    school_name="Sri chaitanya"
-    def Details(self,name,age):
+    def Details(self,name,age):   #instance method
         self.name=name #instance variable
         self.age=age   #instance variable
-
-print(Person.school_name)   
+        
 p1=Person()
 p1.Details("Ram",30)
 p2=Person()
@@ -30,6 +29,17 @@ p2.Details("Gopal",25)
 
 print(p1.__dict__)
 print(p2.__dict__)
+
+#Example 3:Creation of Instance variable outside the class
+class Person:
+    def __init__(self,name):
+        self.name=name #instance variable inside the class
+        
+p1=Person("Ram")
+print(p1.__dict__)
+p1.age=30   #instance variable outside the class
+
+print(p1.__dict__)
 
 '''
 -self.name and self.age hold data that is unique for each Person object created.
@@ -42,22 +52,8 @@ print(p2.__dict__)
 -If the values of the variable is not differ then we can't use instance variable we can use only static variables like(school_name)
 '''
 
-#In the above we have seen Instance variable creation inside the class. Now we are going to create instance variable outside the class.
-
-#Example:
-class Person:
-    def __init__(self,name):
-        self.name=name #instance variable inside the class
-        
-p1=Person("Ram")
-print(p1.__dict__)
-p1.age=30   #instance variable outside the class
-
-print(p1.__dict__)
-
-######## Accessing and deleting the Instance variable ###########
-#Accessing the instance variable inside the class 
-#Example:
+######## Accessing Instance variable ###########
+#Example 1:Accessing the instance variable inside the class 
 class Person:
     def __init__(self,name,age):
         self.name=name 
@@ -65,8 +61,7 @@ class Person:
         print(f"My name is {self.name} and my age is {self.age}")
 p1=Person("Ram",30)
 
-#Accessing the instance variable outside the class 
-#Example:
+#Example 2:Accessing the instance variable outside the class 
 class Person:
     def __init__(self,name,age):
         self.name=name 
@@ -74,8 +69,8 @@ class Person:
 p1=Person("Ram",30)
 print(f"My name is {p1.name} and my age is {p1.age}")
 
-#Delete the instance variable inside the class
-#Example:
+######## Delete Instance variable ###########
+#Example 1: Delete the instance variable inside the class
 class Person:
     def __init__(self,name,age):
         self.name=name 
@@ -97,7 +92,7 @@ class Person:
 p1=Person("Ram",30)
 print(p1.__dict__)
 
-#Deletion outside the class
+#Example 2: Deletion the instance variable outside the class
 class Person:
     def __init__(self,name,age):
         self.name=name 
