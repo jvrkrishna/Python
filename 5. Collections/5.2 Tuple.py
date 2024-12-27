@@ -2,9 +2,9 @@
 cannot change the elements of a tuple once it is assigned whereas we can change the 
 elements of a list. Tuple with () brackets.'''
 
-#Creation of a Tuple
+###############1. Creation of tuple################
 L1=()
-L5=(20,) # , is mandatory otherwise it is trated as ordinary data type
+L5=(20,) # , is mandatory otherwise it is treated as ordinary data type
 L2 = ("John", 102, 'USA',10,"20")
 L3 = (1, 2, 3, 4, 5, 6)
 L4=tuple((1,"Ram")) #in this case we can use [],{}() ---inside brackets
@@ -54,7 +54,7 @@ print(my_tuple[-6])	# 'p'
 #Access the tuple by using slicing
 print(my_tuple[::])
 
-######## Changing tuple element ################
+######## Modify tuple element ################
 my_tuple = (4, 2, 3, [6, 5])
 my_tuple[3][0] = 9  # Output: (4, 2, 3, [9, 5]) 
 
@@ -115,10 +115,19 @@ print(my_tuple)
 
 ######### In built tuple methods ###########
 # cmp(tuple1,tuple2)
+t1=(50,60,70,80)
+t2=(50,60,76,80)
+print(t1==t2)
+print(t1<t2)
+
+# tuple(seq)
+seq=[50,60,70,80]
+result=tuple(seq)
+print(result)
+
 # len(tuple)
 # max(tuple)
 # min(tuple)
-# tuple(seq)
 
 ####### packing in tuple ###########
 a=10
@@ -135,4 +144,4 @@ pack=("Ram",10,20,30,40)
 a,b,c,d,e=pack
 print(a,b,c,d,e) #at the time of un-pack the no of variables and number of value must be same.
 
-##### Tuple not support comprehension
+##### Tuple not support comprehension ########
