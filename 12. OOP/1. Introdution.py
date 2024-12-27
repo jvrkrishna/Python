@@ -57,39 +57,38 @@ print(f"{a} / {b} = {divide(a, b)}")
 #OOP Calculator Example:
 # Defining a Calculator class with methods for operations
 class Calculator:
-    def __init__(self):
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
         self.result = 0  # Store the result of calculations
     
-    def add(self, a, b):
-        self.result = a + b
+    def add(self):
+        self.result = self.a + self.b
         return self.result
     
-    def subtract(self, a, b):
-        self.result = a - b
+    def subtract(self):
+        self.result = self.a - self.b
         return self.result
     
-    def multiply(self, a, b):
-        self.result = a * b
+    def multiply(self):
+        self.result = self.a * self.b
         return self.result
     
-    def divide(self, a, b):
-        if b == 0:
+    def divide(self):
+        if self.b == 0:
             return "Error! Division by zero."
-        self.result = a / b
+        self.result = self.a / self.b
         return self.result
     
     def get_result(self):
         return self.result
 
 # Example usage of the Calculator class
-calc = Calculator()
+calc = Calculator(10,5)
 
 # Performing operations using the Calculator object
-a = 10
-b = 5
-print(f"{a} + {b} = {calc.add(a, b)}")
-print(f"{a} - {b} = {calc.subtract(a, b)}")
-print(f"{a} * {b} = {calc.multiply(a, b)}")
-print(f"{a} / {b} = {calc.divide(a, b)}")
+print(f"{calc.a} + {calc.b} = {calc.add()}")
+print(f"{calc.a} - {calc.b} = {calc.subtract()}")
+print(f"{calc.a} * {calc.b} = {calc.multiply()}")
+print(f"{calc.a} / {calc.b} = {calc.divide()}")
 print(f"Current result is: {calc.get_result()}")
-
