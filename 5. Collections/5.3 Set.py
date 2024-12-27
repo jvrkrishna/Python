@@ -4,7 +4,7 @@
 # print(s)
 # print(type(s))  #basically it is dictionary
 
-#Here it will crate empty dict. Instead of empty set.
+#Here it will create empty dict. Instead of empty set.
 #{} symbol is also used to create dict.
 #We can create empty set by using set()
 
