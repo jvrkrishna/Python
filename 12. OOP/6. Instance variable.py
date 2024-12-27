@@ -51,6 +51,46 @@ print(p1.__dict__)
 -If the values of the variable is differ then we can proceed with Instance variable like(Name and age)because they differ on every object. So,Instance variable is a object level variable.
 -If the values of the variable is not differ then we can't use instance variable we can use only static variables like(school_name)
 '''
+###########Modify Instance variable ############
+#Example 1:Modify the instance variable outside the class 
+class Person:
+    def __init__(self,name):
+        self.name=name
+        
+p1=Person("Ram")
+print(p1.__dict__)
+p1.name="gopal" 
+
+print(p1.__dict__)
+
+#Example 2:Modify the instance variable Inside the class and inside the constructor
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        if self.age<18:
+            self.status="Minor"
+        else:
+            self.status="Adult"
+
+        
+p1=Person("Ram",30)
+print(p1.__dict__)
+
+#Example 3:Modify the instance variable Inside the class and inside the Instance method
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def modify(self,new_age):
+        self.age=new_age
+
+        
+p1=Person("Ram",30)
+print(p1.__dict__)
+
+p1.modify(35)
+print(p1.age)
 
 ######## Accessing Instance variable ###########
 #Example 1:Accessing the instance variable inside the class 
