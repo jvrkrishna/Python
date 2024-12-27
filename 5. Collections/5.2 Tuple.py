@@ -3,39 +3,39 @@ cannot change the elements of a tuple once it is assigned whereas we can change 
 elements of a list. Tuple with () brackets.'''
 
 ###############1. Creation of tuple################
-L1=()
-L5=(20,) # , is mandatory otherwise it is treated as ordinary data type
-L2 = ("John", 102, 'USA',10,"20")
-L3 = (1, 2, 3, 4, 5, 6)
-L4=tuple((1,"Ram")) #in this case we can use [],{}() ---inside brackets
-print(type(L1))
-print(type(L5))
-print(type(L3))
-print(type(L4))
-print(L4)
+T1=()
+T2=(20,) # , is mandatory otherwise it is treated as ordinary data type
+T3 = ("John", 102, 'USA',10,"20")
+T4 = (1, 2, 3, 4, 5, 6)
+T5=tuple((1,"Ram")) #in this case we can use [],{}() ---inside brackets
+print(type(T1))
+print(type(T5))
+print(type(T3))
+print(type(T4))
+print(type(T5))
 
 #Creation of Tuple Dynamically by using eval() function.
-L1=eval(input("Enter the L1 Elements:"))  #input ------ (10,20,30)
-print(type(L1))
-print(L1)
+T6=eval(input("Enter the L1 Elements:"))  #input ------ (10,20,30)
+print(type(T6))
+print(T6)
 
 #Creation of tuple by using range() function.
-L5=tuple(range(0,11))
-print(type(L5))
-print(L5)
+T7=tuple(range(0,11))
+print(type(T7))
+print(T7)
 
 #tuple can hold any complex data type like dict,tuple, etc
-L1=(40,{"name":"Ram"},tuple((10,20,30)))
-L1=40,{"name":"Ram"},"Raj",50 #tuple can create by using without brackets also
-print(type(L1))
-print(L1)
+T8=(40,{"name":"Ram"},tuple((10,20,30)))
+T9=40,{"name":"Ram"},"Raj",50 #tuple can create by using without brackets also
+print(type(T8))
+print(T8)
 
 #creation of a tuple by using string 
 a="Welcome to python world"
 print(type(a))
-L1=tuple(a) 
-print(type(L1))
-print(L1)
+T1=tuple(a) 
+print(type(T1))
+print(T1)
 
 
 #####Accessing tuple Elements by positive and negative index
