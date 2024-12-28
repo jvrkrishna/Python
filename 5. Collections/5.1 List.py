@@ -165,13 +165,30 @@ List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
 print(List.index(2))
 
 ######index method by iter to know all indices
+'''wap to search a value from a list then display its index, if the value is present
+multiple times then print its all indices and also count the number of times that value 
+is repeated in the list.'''
+#######Using while Loop
+list=[10,20,30,40,50,10,20,30,40]
+i=0
+count=0
+search=int(input("Enter the value you want to search:"))
+
+while i<len(list):
+    if search==list[i]:
+        print(f"The value of {search} is present in the list and index is {i}")  
+        count=count+1
+    i=i+1
+print(f'{search} is present {count} times')
+
+#Using for loop
 List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
 indices=[]
 n=int(input("Enter the reqired element:"))
 for i in range(len(List)):
     if List[i]==n:
         indices.append(i)
-print(f"All indices of 10: {indices}")
+print(f"All indices of {n}: {indices}")
 
 #######pop Method used to delete element by index by default last element if we not mention index
 List = [2.3, 4.445, 3, 5.33, 1.054, 2.5]
@@ -344,22 +361,6 @@ for i in list:
         min=i
         
 print("Min is:", min)   
-
-'''wap to search a value from a list then display its index, if the value is present
-multiple times then print its all indices and also count the number of times that value 
-is repeated in the list.'''
-
-list=[10,20,30,40,50,10,20,30,40]
-i=0
-count=0
-search=int(input("Enter the value you want to search:"))
-
-while i<len(list):
-    if search==list[i]:
-        print(f"The value of {search} is present in the list and index is {i}")  
-        count=count+1
-    i=i+1
-print(f'{search} is present {count} times')
 
 
 ###Example
