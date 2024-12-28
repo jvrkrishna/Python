@@ -51,18 +51,13 @@ class Test:
     def update(cls,x,y):
         cls.a=x
         cls.b=y
-        print(f"The value of a is {cls.a} and the value of b is {cls.b}")
 
     @classmethod
     def delete(cls):
         del cls.a
-  
-    @classmethod 
-    def access(cls):
-        print(f"The value of a is {cls.a} and the value of b is {cls.b}")
 
 Test.access()
 Test.update(30,40)
+Test.access()
 Test.delete()
 print(Test.__dict__)
-Test.access()

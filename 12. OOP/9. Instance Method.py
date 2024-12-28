@@ -55,20 +55,15 @@ class Test:
     def update(self,x,y):
         self.a=x
         self.b=y
-        print(f"The value of a is {self.a} and the value of b is {self.b}")
 
     def delete(self):
         del self.a
-        
-    def access(self):
-        print(f"The value of a is {self.a} and the value of b is {self.b}")
+
         
 t1=Test(10,20)
 print(t1.__dict__)
 t1.access()
 t1.update(30,40)
-Test.delete()
-print(Test.__dict__)
 t1.access()
-
-
+t1.delete()
+print(t1.__dict__)
