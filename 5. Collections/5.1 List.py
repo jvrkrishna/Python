@@ -352,7 +352,7 @@ for i in range(len(list)):
 print("\nFinal List is:")
 print(list)
     
- #WAP to print min and max values in the list
+#WAP to print min and max values in the list
 list=[10,30,4,50,35,60]
 min=list[0]
 
@@ -393,11 +393,11 @@ for i in enumerate(l1):
 #If list is present inside another list is called as Nested List.
 ## 0  1   2  3  4[1,2,3]  5   6
 l=[10,20,30,40,[41,42,43],50,60]
+
 ###Negative index as well
 
 print(l[2])
 print(l[4][1])
-
 
 #Nested List in a Matrix
 l=[[10,20,30],[40,50,60],[70,80,90]]
