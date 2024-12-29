@@ -125,9 +125,9 @@ seq=[50,60,70,80]
 result=tuple(seq)
 print(result)
 
-# len(tuple)
-# max(tuple)
-# min(tuple)
+# len(result)
+# max(result)
+# min(result)
 
 ####### packing in tuple ###########
 a=10

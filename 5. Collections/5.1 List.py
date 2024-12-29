@@ -1,5 +1,4 @@
-'''List a collection of elements with various data types. It is mutable mean we can change 
-the values after creation of list also. List with [] brackets.'''
+'''List a collection of elements with various data types. It is mutable mean we can change the values after creation of list also. List with [] brackets.'''
 ############################## 1. Creation #########################
 #Creation of a list
 L1=[]
@@ -383,6 +382,24 @@ for i in l1:
         
 print(new_list)
 
+'''Enumarate Function:
+            The enumerate() function takes a collection (e.g. a tuple) and returns it as an enumerate object.The enumerate() function adds a counter as the key of the enumerate object.
+
+Syntax:
+        enumerate(iterable, start)
+
+iterable ----------- An iterable object
+start---------A Number. Defining the start number of the enumerate object. Default 0
+'''
+
+#Example:
+x = ('apple', 'banana', 'cherry')
+y = enumerate(x)
+print(list(y))
+
+'''output: It returns Index(i.e., Iterable) and value
+[(0, 'apple'), (1, 'banana'), (2, 'cherry')] '''
+
 #enumerate function used to print the value and index
 #By using enumerate the code will decrease.
 l1=[10,20,30,40,50]
@@ -391,17 +408,15 @@ for i in enumerate(l1):
     print(i)
     
 #If list is present inside another list is called as Nested List.
-## 0  1   2  3  4[1,2,3]  5   6
+## 0  1   2  3  4[0,1,2]  5   6
 l=[10,20,30,40,[41,42,43],50,60]
 
 ###Negative index as well
-
 print(l[2])
 print(l[4][1])
 
 #Nested List in a Matrix
 l=[[10,20,30],[40,50,60],[70,80,90]]
-
 print(l)
 
 ####print row wise matrix

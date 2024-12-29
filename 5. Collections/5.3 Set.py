@@ -1,8 +1,10 @@
-#Creation of Empty set is bit tricky
+'''set a collection of elements with various data types. set is mutable(We can change) and its elements are immutable(we can't change).Set cannot accept duplicate elements. Set cannot follow order. Set with {} brackets.'''
 
-# s={}
-# print(s)
-# print(type(s))  #basically it is dictionary
+############## Creation ###############
+#Creation of Empty set is bit tricky
+s={}
+print(s)
+print(type(s))  #basically it is dictionary
 
 #Here it will create empty dict. Instead of empty set.
 #{} symbol is also used to create dict.
@@ -45,6 +47,7 @@ s=set(t)
 print(s)
 print(type(s))
 
+################ Accessing ###################
 #We cannot apply indexing and slicing in set.
 
 #Applying membership operator in set
@@ -52,6 +55,12 @@ s={10,20,30,40,50}
 print(30 in s)
 print(60 not in s)
 
+####### iteration #######
+s={10,20,30,40,50}
+for i in s:
+        print(i)
+
+############ Updating ###############
 #Modification of set in python ---We can add or remove items from it.
 #i.e., Set is mutable and its elements are immutable.
 
@@ -62,7 +71,7 @@ print(my_set)
 # if you uncomment the above line # you will get an error
 # TypeError: 'set' object does not support indexing # add an element
 
-#Add Method
+#Add Method By using this method we can add only one element
 # Output: {1, 2, 3} 
 my_set.add(2) 
 print(my_set)
@@ -89,6 +98,7 @@ print(s)
 s.update(l,range(10))
 print(s)
 
+############## Delete ##################
 #remove method
 #It is used to remove the specified element from the set
 #If the specified element is not present then it will raise Key Error
@@ -144,25 +154,8 @@ s1={10,20,30,40,50}
 s1.clear()
 print(s1)
 
-'''Enumarate Function:
-            The enumerate() function takes a collection (e.g. a tuple) and returns it as an enumerate object.The enumerate() function adds a counter as the key of the enumerate object.
-
-Syntax:
-        enumerate(iterable, start)
-
-iterable ----------- An iterable object
-start---------A Number. Defining the start number of the enumerate object. Default 0
-
-Example:
-x = ('apple', 'banana', 'cherry')
-y = enumerate(x)
-print(list(y))
-
-output: It returns Index(i.e., Iterable) and value
-[(0, 'apple'), (1, 'banana'), (2, 'cherry')] '''
-
 #Union Method
-#It is used to return all the elements presesnt in both the sets
+#It is used to return all the elements present in both the sets
 s1={10,20,30,40}
 s2={10,50,60}
 print(s1.union(s2))
@@ -176,7 +169,7 @@ print(s1.intersection(s2))
 print(s1&s2)
 
 #Difference Method
-#It is used to return only a elements not S2 elements or not common elements
+#It is used to return only s1 elements not S2 elements or not common elements
 s1={10,20,30,40}
 s2={10,50,60}
 print(s1.difference(s2))
@@ -204,23 +197,22 @@ print(A.isdisjoint(B))
 #If you want to create a list from iterable objects like list,tuple,range,dict etc
 #By writing very less code in efficient way then we can go for set comprehensions.
 ####Normal example
-# s=set()
-# for i in range(11):
-#     s.add(i)
+s=set()
+for i in range(11):
+    s.add(i)
     
-# print(s)
+print(s)
 
-# # ###By using list comprehension
-# s={i for i in range(11)}
-# print(s)
+####By using list comprehension
+s={i for i in range(11)}
+print(s)
 
-# s={i*2 for i in range(11)}
-# print(s)
+s={i*2 for i in range(11)}
+print(s)
 
-#Another Example
-# l=[10,20,30]
-# s={i*i for i in l}
-# print(s)
+l=[10,20,30]
+s={i*i for i in l}
+print(s)
 
 #Create a set by adding all the elements from 20 to 40 which is divisible by 4.
 s={i for i in range(20,41) if i%4==0}
