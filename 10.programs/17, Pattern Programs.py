@@ -345,4 +345,29 @@ for i in range(n):
         else:
             print(" ",end=" ")
     print()
+
+#Wap to print below pattern
+'''
+  *                   *   
+    *               *   
+      *           *   
+        *       *   
+          *   *   
+            *
+'''
+n=5
+for i in range(n):
+    for j in range(i+1):
+        print(" ",end=" ")
+    for j in range(i,n+1):
+        if(j==i):
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    for j in range(i,n+1):
+        if(j==n-1):
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
     
