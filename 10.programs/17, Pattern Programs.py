@@ -163,7 +163,7 @@ for i in range(n):
 '''
 
 #Diamond Pattern:
-Hill Pattern + Reverse Hill Pattern(Mountain) = Diamond Pattern
+#Hill Pattern + Reverse Hill Pattern(Mountain) = Diamond Pattern
 
 n=5
 for i in range(n-1):
