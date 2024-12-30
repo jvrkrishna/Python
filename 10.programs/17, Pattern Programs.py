@@ -199,3 +199,150 @@ for i in range(n):
           *
 '''
 
+###Wap to print first row and last row *'s and middle are spaces
+n=5
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+    
+'''
+* * * * * 
+
+
+
+* * * * *
+'''
+
+###Wap to print first column and last column *'s and middle are spaces
+n=5
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+    
+'''
+*       * 
+*       * 
+*       * 
+*       * 
+*       *
+'''
+
+###Wap to print Middle column and Middle row as like + print the  *'s.
+n=5
+for i in range(n):
+    for j in range(n):
+        if i==n//2 or j==n//2:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+    
+'''
+    *     
+    *     
+* * * * * 
+    *     
+    *     
+'''
+
+###Wap to print Middle diagonals as like X print the  *'s.
+n=5
+for i in range(n):
+    for j in range(n):
+        if i==j or i+j==n-1 :
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+    
+'''
+*       * 
+  *   *   
+    *     
+  *   *   
+*       *     
+'''
+
+#Wap to print zero shape *'s
+n=5
+for i in range(n):
+    for j in range(n):
+        if i==0 or j==0 or i==n-1 or j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+'''
+* * * * * 
+*       * 
+*       * 
+*       * 
+* * * * * 
+'''
+
+###Wap to print below pattern.
+'''
+* 
+* * 
+*   * 
+*     * 
+* * * * * 
+'''
+n=5
+for i in range(n):
+    for j in range(i+1):
+        if j==0 or i==4 or i==j:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+#Wap to print below pattern
+'''
+* * * * * 
+*     *
+*   *
+* *
+*
+'''
+n=5
+for i in range(n):
+    for j in range(i,n):
+        if i==0 or j==i or j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+###WAP to print below pattern
+'''
+          * 
+        *   * 
+      *       * 
+    *           * 
+  * * * * * * * * * 
+'''
+n=5
+for i in range(n):
+    for j in range(i,n):
+        print(" ",end=" ")
+    for j in range(i):
+        if(i==n-1 or j==0):
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    for j in range(i+1):
+        if(i==n-1 or j==i):
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+    
