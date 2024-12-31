@@ -32,7 +32,7 @@ while i<=5:
         break
 else:print("The while loop exhausted")
 
-Using string print the characters
+#Using string print the characters
 i=0
 a="Rama krishna"
 while i<len(a):
