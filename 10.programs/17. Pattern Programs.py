@@ -123,6 +123,22 @@ for i in range(n):
           *
 '''
 
+#WAP to print the pyramid pattern
+n=5
+for i in range(n):
+    for j in range(i,n):
+        print("",end=" ")
+    for j in range(i+1):
+        print("*",end=" ")
+    print()
+'''
+     * 
+    * * 
+   * * * 
+  * * * * 
+ * * * * * 
+'''
+
 #Hill Pattern:
 n=5
 for i in range(n):
@@ -141,7 +157,7 @@ for i in range(n):
   * * * * * * * * * 
 '''
 
-#Mountain Pattern:
+#Reverse Hill Pattern:
 n=5
 for i in range(n):
     for j in range(i+1):
@@ -163,7 +179,7 @@ for i in range(n):
 '''
 
 #Diamond Pattern:
-#Hill Pattern + Reverse Hill Pattern(Mountain) = Diamond Pattern
+#Hill Pattern + Reverse Hill Pattern = Diamond Pattern
 
 n=5
 for i in range(n-1):
@@ -359,7 +375,7 @@ n=5
 for i in range(n):
     for j in range(i+1):
         print(" ",end=" ")
-    for j in range(i,n+1):
+    for j in range(i,n-1):
         if(j==i):
             print("*",end=" ")
         else:
@@ -370,4 +386,3 @@ for i in range(n):
         else:
             print(" ",end=" ")
     print()
-    
