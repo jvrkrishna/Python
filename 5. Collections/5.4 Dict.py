@@ -1,11 +1,11 @@
 #By using List, Tuple, Set we can store only values
 #Sometimes as a programmer we require to key and value as a pair in that case we can go to dictionary.
 
-# empty dictionary 
+########Creating Dictionary
 my_dict = {}    #my_dict=dict()
 print(my_dict)
 
-# empty dictionary 
+# adding a key value to empty dict
 my_dict = {}
 my_dict['name']="Rama"
 print(my_dict)
@@ -25,31 +25,16 @@ my_dict = dict({1:'apple', 2:'ball'})
 print(my_dict)
 
 # from sequence having each item as a pair 
-my_dict = dict([(1,'apple'), (2,'ball')])
+my_dict=dict([(1,"Apple"),(2,"Raju"),("Name","ravi")])
 print(my_dict)
 
-#Accessing the dict elements
-# get vs [] for retrieving elements 
-my_dict = {'name': 'Jack', 'age': 26} 
+my_dict=dict(((1,"Apple"),(2,"Raju")))
+print(my_dict)
 
-# Output: Jack 
-print(my_dict['name'])
+my_dict=dict({(1,"Apple"),(2,"Raju")})
+print(my_dict)
 
-# Output: 26 
-print(my_dict.get('age'))
-
-# Trying to access keys which doesn't exist throws error # Output None
-print(my_dict.get('address')) 
-
-# KeyError 
-print(my_dict['address'])
-
-#Check whether key is existed or not
-dict={1:"Rama",2:"Krishna"}
-print(2 in dict)
-print(3 not in dict)
-
-#Create the dictionary Dynamically
+#####Create the dictionary dynamically
 dict={}
 
 while True:
@@ -64,103 +49,106 @@ while True:
 
 print(dict)
 
-#Traversing List
-dict={1:"Rama",2:"Krishna"}
+############ Accessing the elements in the dict #############
+my_dict={"name":"Rama","age":30}
+print(my_dict["age"])
 
-for i in dict:
-    print(i, dict[i])
+#We can try to access the key that not exist
+print(my_dict["address"]) #Key Error
 
-#Add and Modify
-dict={1:"Rama",2:"Krishna"}
+###Check whether key is existed or not#########
+my_dict={"name":"Rama","age":30}
+print("age" in my_dict)
 
-dict[3]="Kat"
-print(dict)
+##### Access the elements by using for loop
+my_dict={1:"Rama",2:"Krishna"}
 
-dict[1]="Ram"  #modify
-print(dict)
+for i in my_dict:
+    print(i, my_dict[i]) #keys= i and values=dict[i]'''
 
-#Delete
-dict={1:"Rama",2:"Krishna"}
+#######Modification
+my_dict={1:"Rama",2:"Krishna"}
 
-del dict[1]
-print(dict)
+my_dict[1]="Gopal"  #Here we modify the values with the help of key not index number
+print(my_dict)
+
+my_dict[3]="Seetha" #We are adding elements to the dictionary
+print(my_dict)
+
+#########Delete a key value from dictionary
+my_dict={1:"Rama",2:"Krishna"}
+
+del my_dict[1]  #Here we deleted with the help of key not index
+print(my_dict)
 
 del dict   #entire dictionary deleted 
 print(dict)
 
-#############Methods
-#Get Method
-#It is used to return the corresponding value associated with that key.
-#If the specified key is not available then it will return the default value.
-d={1:"Ram",2:"Krishna"}
+#############Methods###########
+#Get method
+'''
+It is use to give the value corresponding to that key. If key is not present it returns None.'''
+d={1:"ram",2:"Seetha"}
 print(d.get(1))
-print(d.get(3))  #None
-print(d.get(3, "Unknown")) #Unknown
+print(d.get(3))
 
-#Items Method
-d={1:"Ram",2:"Krishna"}
+print(d.get(3, "Please check the key is present or not"))
+
+#items method
+'''Item return the complete items in the dictionary both key and values'''
+d={1:"ram",2:"Seetha"}
 print(d.items())
 
 for i in d.items():
     print(i)
-    
-for i, j in d.items():
-    print(i,  j)
 
-#pop Method
-#It is used to remove the key and its associated value, then it will return that value.
-#If the key is not available then it will raise KeyError.
-#pop methods except one argumant if will not pass any argument then it will raise TypeError.
-d={1:"Ram",2:"Krishna"}
-d.pop(1)
-print(d)
-d.pop() #KeyError
-
-d={1:"Ram",2:"Krishna"}
-d.pop()
-
-#popItem Method
-#It is used to remove the last inserted item in Dictionary and return that item in tuple format
-d={1:"Ram",2:"Krishna"}
-print(d.popitem())
-
-#Keys Method
-#It is used to return all the keys of dictionary in list format.
-d={1:"Ram",2:"Krishna"}
+#Keys method
+''' It returns the keys only'''
+d={1:"ram",2:"Seetha"}
 print(d.keys())
 
 for i in d.keys():
     print(i)
-    
-#values Method
-#It is used to return all the values of a dictionary in list format.
-d={1:"Ram",2:"Krishna"}
-print(d.values())
+ 
+#Values method
+''' It returns the values only'''  
+d={1:"ram",2:"Seetha"}
+print(d.values()) 
 
 for i in d.values():
     print(i)
-
-#setdefault Method
-#Here as an argument we will provide key and value.
-#It is used to return the value associated with that specified key.
-#If the key is not available then key and value will be added as new item to the dictionary.
-d={1:"Ram",2:"Krishna"}
-print(d.setdefault(111, "Rama Krishna"))
+    
+#pop method
+'''It is used to remove the key and value. If the key is not present then it will raise KeyError.'''
+d={1:"ram",2:"Seetha"}
+d.pop(1)  #Here we have to pass atleast one key. If no key is passed it raise error.
 print(d)
 
-print(d.setdefault(2, 'Gopal')) #Key and value will not modified.
+#pop Item Method
+''' It is used to remove the last inserted item in dict'''
+d={1:"ram",2:"Seetha"}
+d.popitem()
 print(d)
 
-#Update Mehtod
-#It is used to add all the items d2 in d1.
-d1={1:"Ram",2:"Krishna"}
-d2={3:"Rama Krishna",4:"Gopal"}
+#Set Default method
+'''Here an argument we will provide key and value. It is used to return the value with that key. If the key is not present then the value will be added as new item to dictionary.'''
+d={1:"ram",2:"Seetha"}
+print(d.setdefault(11, "Rama Krishna"))
+print(d)
+
+print(d.setdefault(2, "Harini"))
+print(d)
+
+#Update Method
+'''It is used to add all the elements from one dict to another dict.'''
+d1={1:"ram",2:"Seetha"}
+d2={3:"Raju",4:"Harini"}
 d1.update(d2)
 print(d1)
 
-#If the key of both dict is same then it will be consider the updated one.
-d1={1:"Ram",2:"Krishna"}
-d2={2:"Rama Krishna",3:"Gopal"}
+#If the key is present in both dict then it will be consider the updated one
+d1={1:"ram",2:"Seetha"}
+d2={2:"Raju",4:"Harini"}
 d1.update(d2)
 print(d1)
 
