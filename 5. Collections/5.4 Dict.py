@@ -1,5 +1,6 @@
 #By using List, Tuple, Set we can store only values
 #Sometimes as a programmer we require to key and value as a pair in that case we can go to dictionary.
+#Dict is unordered, mutable and indexed by keys.
 
 ########Creating Dictionary
 my_dict = {}    #my_dict=dict()
