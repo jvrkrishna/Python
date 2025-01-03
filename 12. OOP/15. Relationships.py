@@ -32,6 +32,18 @@ class Car:
         print(f'Car Name is {self.cname}')
         print(f'Car color is {self.ccolor}')
         print(f'Car Price is {self.cprice}')
+        print("* " * 20)
+        
+class Laptop:
+    def __init__(self,lname,lcolor,lprice):
+        self.lname=lname
+        self.lcolor=lcolor
+        self.lprice=lprice
+    def Laptop_details(self):
+        print(f'Laptop Name is {self.lname}')
+        print(f'Laptop color is {self.lcolor}')
+        print(f'Laptop Price is {self.lprice}')
+
         
 class Employee:
     def __init__(self,ename,eid,eaddress):
@@ -39,11 +51,15 @@ class Employee:
         self.eid=eid
         self.eaddress=eaddress
         self.c=Car('Thar','Black','20Lakhs') # Object creation of car class
+        self.l=Laptop("HP","White","40Thousand") # Object creation of Laptop class
     def Emp_details(self):
         print(f'Emp Name is {self.ename}')
         print(f'Emp id is {self.eid}')
         print(f'Emp Address is {self.eaddress}')
+        print("* " * 20)
         self.c.Car_details() # Print the details of another class
+        self.l.Laptop_details() # Print the details of another class
+        
 
 e=Employee("Ram", 1234, "Kakinada")
 e.Emp_details()
@@ -55,5 +71,9 @@ Emp Address is Kakinada
 Car Name is Thar
 Car color is Black
 Car Price is 20Lakhs
+Laptop Name is HP
+Laptop color is White
+Laptop Price is 40Thousand
 '''
 
+#Here in the above program Employee is Containership, car and laptops are smaller objects
