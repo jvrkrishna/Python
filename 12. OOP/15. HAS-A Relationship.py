@@ -78,4 +78,3 @@ Laptop Price is 40Thousand
 
 #Here in the above program Employee is Containership, car and laptops are smaller objects
 
-#1. IS-A Relationship
