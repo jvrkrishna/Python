@@ -112,6 +112,30 @@ DisAdv:
 1. Base and derived class both are tightly coupled(If we made any changes on parent class it will directly reflect on child class).
 '''
 
-      
+#Example about Disadvantage: If we change the value in parent class it will reflect in child class that's way Inheritance concept is tightly coupled.
+class A:
+    def m1(self):
+        self.x=10 #If we change the value it will reflect every were
+        print(f"Value or x is {self.x}")
+
+class B(A):
+    pass
+
+b=B()
+b.m1()
+
+#Example: If we change the value in child class it will not reflect in parent class.
+class A:
+    def m1(self):
+        self.x=10
+        print(f"Value or x is {self.x}")
+
+class B(A):
+    def m2(self):
+        self.x=20
+        
+
+b=B()
+b.m1()
         
         
