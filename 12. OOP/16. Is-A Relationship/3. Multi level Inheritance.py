@@ -18,14 +18,14 @@ class C(B):
     def method3(self):
         print("This is grandchild C class Method3")
         
-a=A()
+a=A()   #A have only A class method
 a.method1()
 
-b=B()  
+b=B()  #B have both A and B class methods
 b.method1()
 b.method2()
 
-c=C()
+c=C()  #C have A,B,C class methods
 c.method1()
 c.method2()
 c.method3()
