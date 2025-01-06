@@ -93,6 +93,7 @@ class B:
     def Details(self):
         print(f'x is {self.x}')
         print(f'y is {self.y}')
+        
 b=B()
 b.Details()
 
