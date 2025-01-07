@@ -1,7 +1,8 @@
+######## Super function ######
+'''If parent class and child class having members with same name then from child class we can access parent class members using super().'''
+
 #Without super():
-'''
-If parent class and child class having members with same name then from child class we can access parent class members using super().
-Here we are creating same variables again and again like name and age.'''
+'''Here we are creating same variables again and again like name and age.'''
 class Student:
     def __init__(self,name,sid,age):
         self.name=name

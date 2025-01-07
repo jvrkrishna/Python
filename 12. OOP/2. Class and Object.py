@@ -70,7 +70,7 @@ s1.sample("Gopal",30)
 #All classes have a function called __init__(), which is always executed when the class is being initiated.
 #Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created
 #Here no need to call with object (app.__init__(10)). It will execute directly when object created.
-#Here init is a constructor as well as method 
+#Here init is a constructor as well as method used to assign values to instance variable
 
 #Example 3
 class Student:
