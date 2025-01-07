@@ -37,5 +37,5 @@ print(issubclass(Parent,object))   #True
 print(issubclass(Child,object))    #True
 print(issubclass(Child,Parent))    #True
 
-#The above diamond is very easy we can solve by seeing. Suppose if we have complex diamond then what we to do. By following MRO Algorithm we can solve these type of Diamonds.
+#The above diamond is very easy we can solve by seeing. Suppose if we have complex diamond then what we have to do. By following MRO Algorithm we can solve these type of Diamonds.
 

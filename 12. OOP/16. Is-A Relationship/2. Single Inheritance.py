@@ -42,7 +42,7 @@ b.method3()
 b.method1()
 b.method2()
 
-#Example: child class can access constructor, instnce method, staticmethod, classmethod.
+#Example: child class can access constructor, instance method, staticmethod, classmethod.
 class A:
     a=10
     print(f"value of a is {a}")
