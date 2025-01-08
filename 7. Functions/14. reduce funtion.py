@@ -4,28 +4,28 @@ Reduce function present inside the functools, so we have to import it before usi
 
 #Example:
 from functools import reduce
-x=[10,20,30,40]
+seq=[10,20,30,40]
 def function(a,b):
     return a+b
 
-d=reduce(function,x)
-print(d)
+result=reduce(function,seq)
+print(result)
 
 #Example:
 from functools import reduce
-d=reduce(lambda a,b:a+b,[2,3,4,5])
-print(d)
+result=reduce(lambda a,b:a+b,[2,3,4,5])
+print(result)
 
 #Example:
 from functools import reduce
-d=reduce(lambda a,b:a if a>b else b,[2,8,4,5])
-print(d)
+result=reduce(lambda a,b:a if a>b else b,[2,8,4,5])
+print(result)
 
 #Example:
 from functools import reduce
 d={1:"Rama",2:"Krishna",3:"Gopal",4:"Rambabu"}
-output=reduce(lambda a,b:a+b,d.items())
-print(output)
+result=reduce(lambda a,b:a+b,d.items())
+print(result)
 
 #Difference between reduce and accumulate
 '''
@@ -34,10 +34,10 @@ accumulate syntax:(iterable,function)
 '''
 #reduce example
 from functools import reduce
-d=reduce(lambda a,b:a+b,[2,3,4,5])
-print(d)
+result=reduce(lambda a,b:a+b,[2,3,4,5])
+print(result)
 
 #accumulate example
 from itertools import accumulate
-e=list(accumulate([2,3,4,5],lambda a,b:a+b))
-print(e)
+result=list(accumulate([2,3,4,5],lambda a,b:a+b))
+print(result)
