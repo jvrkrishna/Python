@@ -1,4 +1,4 @@
-########## Method Resolution Order (MRO) Algorithm ##########
+########## Method Resolution Order (MRO) Algorithm / c3 Linearization##########
 '''
 This algorithm is used to solve the diamond problem in multiple inheritance or Hybrid Inheritance.
     
