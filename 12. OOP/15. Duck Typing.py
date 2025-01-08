@@ -3,25 +3,25 @@
 Duck typing is to determine if an object is suitable for a purpose by checking for the presence of certain methods and properties rather than objects actual type.
 '''
 
-# #Example
-# class A:
-#     def m1(self):
-#         print('A-m1')
-# class B:
-#     def m1(self):
-#         print('B-m1')
-# class C:
-#     def m1(self):
-#         print('C-m1')
+#Example
+class A:
+    def m1(self):
+        print('A-m1')
+class B:
+    def m1(self):
+        print('B-m1')
+class C:
+    def m1(self):
+        print('C-m1')
         
-# def search(x):
-#     x.m1()
+def search(x):
+    x.m1()
 
-# a=A()
-# search(a)
+a=A()
+search(a)
 
-# b=B()
-# search(b)
+b=B()
+search(b)
 
 #Example
 class Duck:
