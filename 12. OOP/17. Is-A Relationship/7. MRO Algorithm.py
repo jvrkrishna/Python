@@ -44,7 +44,7 @@ print(issubclass(Child,Parent))    #True
 1. Consider the head element as first element.
 2. Then check if the head is not available in the tail part of all other lists then add the head to the result.
 else
-Consider next list first element as the head element then do the same process until getting the result.
+If available take next list first element as the head element then do the same process until getting the result.
 
 Ex:         Object          
               *
