@@ -28,6 +28,7 @@ __main__ #from sample2 program __name__ as __main__ because it is direct
 '''
 
 #Example:
+#sample1 program code
 def add(a,b):
     print(a+b)
 
@@ -35,4 +36,11 @@ if __name__=='__main__':
     add(10,20)
 else:
     print("add() is not direct execution.")
+    
+'''If we run these above problem in sample1 it gives the output as 30'''
+
+#sample 2 program code
+import sample1
+
+'''If we run the above code in sample2 it gives the output as 'add() is not direct execution.' '''
     
