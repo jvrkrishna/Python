@@ -76,7 +76,7 @@ MRO(F)=F+merge([MRO(D)],[MRO(E)],[DE])
       =F+D+B+E+C+merge([A O],[A O])
       =F+D+B+E+C+A+merge([O],[O])
       =F+D+B+E+C+A+O
-MRO(F)=F D B E C A O ----Retult
+MRO(F)=F D B E C A O ----Result
 '''
 #Example:
 class A:pass
