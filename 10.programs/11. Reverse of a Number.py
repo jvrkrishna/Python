@@ -8,3 +8,16 @@ while num != 0:
     num //= 10
 
 print("Reversed Number: " + str(reversed_num))
+
+#Using slicing
+n=int(input("Enter n value:"))
+a=str(n)
+print(a[::-1])
+
+#Using for
+n=int(input("Enter n value:"))
+a=str(n)
+ra=""
+for i in range(len(a)):              
+    ra=ra+a[len(a)-i-1]      
+print(ra)
