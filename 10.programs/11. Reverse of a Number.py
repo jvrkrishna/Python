@@ -21,3 +21,13 @@ ra=""
 for i in range(len(a)):              
     ra=ra+a[len(a)-i-1]      
 print(ra)
+
+#Using for
+n=int(input("Enter n value:"))
+a=str(n)
+ra=0
+for i in range(len(a)):              
+    digit = n % 10
+    ra = ra * 10 + digit
+    n //= 10   
+print(ra)
