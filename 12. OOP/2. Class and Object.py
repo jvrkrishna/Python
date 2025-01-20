@@ -44,7 +44,7 @@ Multiple objects can point to the same object.
 a=10   #Here a is reference variable which is stored in stack memory and value 10 is an object which is stored in Heap memory.
 
 #Example 1
-class Student():
+class Student:
     '''Here marks is a property(i.e.,variable) and sample() is behaviour(i.e., method) '''
     marks=10
     def sample(self):  
