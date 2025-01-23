@@ -8,7 +8,7 @@
 --->abc module stands for abstract base class.
 --->Abstract class can also contain concreate method.
 --->Abstract method means a method without having body part is called abstract method.
---->If we don't know the body part of a method then at that particularm time we can define abstract method.
+--->If we don't know the body part of a method then at that particular time we can define abstract method.
 --->By using @abstractmethod decorator we can abstract method.
 --->Child class will provide the body part of abstract method.
 --->We can create the object of a abstract class. 
