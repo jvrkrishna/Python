@@ -23,7 +23,7 @@ class College:
     def __init__(self):
         self.__balance=50000 #data hiding --- private variable
 c=College()
-print(c.balance) #Here all cannot access 
+print(c.__balance) #Here all cannot access 
 
 #Encapsulation without authentication ---- Here accessing is possible but still we are not authorised user.
 class College:
