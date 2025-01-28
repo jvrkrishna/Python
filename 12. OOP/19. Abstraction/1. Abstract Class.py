@@ -15,20 +15,6 @@
 --->If a method have body part then that method is called as concreate method.
 '''
 
-'''
-The abc module and ABC class are part of Python's standard library and are used to define Abstract Base Classes (ABCs). This provides a way to define abstract classes in Python, similar to other object-oriented languages.
-
-The abc Module:
-The abc module in Python provides tools for defining abstract base classes (ABCs). An abstract base class is a class that cannot be instantiated directly and usually contains abstract methods that must be implemented by any subclass.
-
-The ABC Class:
-The ABC class is the base class for defining abstract base classes in Python. It provides the necessary functionality to define abstract methods and mark a class as abstract. It is defined within the abc module.
-
-Key Components:
-Abstract Methods: You can define abstract methods using the @abstractmethod decorator. These methods must be implemented by any subclass.
-ABC Class: You subclass ABC to create your own abstract base class.
-'''
-
 #Example of Using abc Module and ABC Class:
 from abc import ABC, abstractmethod #Here abc module ABC class
 
