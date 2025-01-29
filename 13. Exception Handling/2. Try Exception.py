@@ -39,7 +39,7 @@ Error: SyntaxError: EOL while scanning string literal
 When defining a function, you need to use the correct syntax with parentheses.
 
 def greet name:
-    print("Hello!")
+print("Hello!")
 Error: SyntaxError: invalid syntax
 
 6. Using Reserved Keywords as Variable Names
@@ -101,23 +101,6 @@ int('hello')  # ValueError: invalid literal for int() with base 10: 'hello'
 
 Handling Errors with Try and Except
 Python provides a mechanism to handle errors gracefully using the try and except blocks. This allows you to catch and deal with exceptions without crashing your program.
-
-Example:
-try:
-    a = 10 / 0
-except ZeroDivisionError:
-    print("You can't divide by zero!")
-Output: You can't divide by zero!
-You can also handle multiple exceptions or catch all exceptions with a generic except clause:
-
-try:
-    x = int(input("Enter a number: "))
-    result = 10 / x
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
-except ValueError:
-    print("Please enter a valid number!")
-This approach makes your code more robust, as it allows you to recover from errors instead of letting the program terminate abruptly.
 ''' 
 
 #Exception:
@@ -214,7 +197,7 @@ Enter b value:0
 a=int(input("Enter a value:"))
 b=int(input("Enter b value:"))
 try:
-    print(a/b)
+    print(a/b)  
 except ZeroDivisionError:
     print(a+b)
 

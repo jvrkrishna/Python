@@ -121,7 +121,7 @@ Output:
 file open code
 '''
 
-#Example:finally with funcction return statement
+#Example:finally with function return statement
 def sample():
     try:
         print(1)

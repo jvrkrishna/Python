@@ -1,6 +1,6 @@
 ############# Assertion ################
 '''
---->Assert is keyword in python which is used in debugging.
+--->Assert is keyword in python which is used for debugging.
 --->Debugging is the process of finding and fixing bugs.
 --->If we want to verify something then we can use assertion.
 '''
@@ -34,7 +34,7 @@ print(4)
 #Example:
 x = 5
 assert x > 0, "x should be positive"
-assert x < 3, "x should be less than 3"
+assert x < 3, "Sorry X is not less than 3"
 
 #Example:
 l=["Ram","Gopi","Seetha"]
