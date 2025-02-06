@@ -468,7 +468,7 @@ names=["rama","banti","roji"]
 l=[i if i !="banti" else 'hello' for i in names]
 print(l)
 
-#create alist form tuple
+#create alist from tuple
 t=(10,20,30,40)
 l=[i for i in t]
 print(l)
