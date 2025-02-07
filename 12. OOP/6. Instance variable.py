@@ -93,7 +93,7 @@ p1.name="gopal"
 print(p1.__dict__)
 
 ######## Accessing Instance variable ###########
-#Example 1:Accessing the instance variable inside the class 
+#Example 1:Accessing the instance variable inside the Constructor
 class Person:
     def __init__(self,name,age):
         self.name=name 
@@ -101,7 +101,18 @@ class Person:
         print(f"My name is {self.name} and my age is {self.age}")
 p1=Person("Ram",30)
 
-#Example 2:Accessing the instance variable outside the class 
+#Example 2:Accessing the instance variable inside the Instance Method
+class Person:
+    def __init__(self,name,age):
+        self.name=name 
+        self.age=age   
+    
+    def detials(self):
+        print(f"My name is {self.name} and my age is {self.age}")
+p1=Person("Ram",30)
+p1.detials()
+
+#Example 3:Accessing the instance variable outside the class 
 class Person:
     def __init__(self,name,age):
         self.name=name 
@@ -110,7 +121,16 @@ p1=Person("Ram",30)
 print(f"My name is {p1.name} and my age is {p1.age}")
 
 ######## Delete Instance variable ###########
-#Example 1: Delete the instance variable inside the class
+#Example 1: Delete the instance variable inside the Constructor
+class Person:
+    def __init__(self,name,age):
+        self.name=name 
+        self.age=age  
+        del self.age
+p1=Person("Ram",30)
+print(p1.__dict__)
+
+#Example 2: Delete the instance variable inside the Instance method
 class Person:
     def __init__(self,name,age):
         self.name=name 
@@ -123,16 +143,7 @@ print(p1.__dict__)
 p1.deleteDetails()
 print(p1.__dict__)
 
-#Example:
-class Person:
-    def __init__(self,name,age):
-        self.name=name 
-        self.age=age  
-        del self.age  #inside the class and inside the constructor
-p1=Person("Ram",30)
-print(p1.__dict__)
-
-#Example 2: Deletion the instance variable outside the class
+#Example 3: Deletion the instance variable outside the class
 class Person:
     def __init__(self,name,age):
         self.name=name 
