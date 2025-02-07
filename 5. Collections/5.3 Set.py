@@ -72,18 +72,21 @@ print(my_set)
 # TypeError: 'set' object does not support indexing # add an element
 
 #Add Method By using this method we can add only one element
-# Output: {1, 2, 3} 
+# Output: {1, 2, 3}
+my_set = {1, 3}  
 my_set.add(2) 
 print(my_set)
 
 #Update Method
 # add multiple elements
 # Output: {1, 2, 3, 4}
+my_set = {1, 3} 
 my_set.update([2, 3, 4]) 
 print(my_set)
 
 # add list, set and tuple
-# Output: {1, 2, 3, 4, 5, 6, 8}
+#output is  {1, 3, 4, 5, 6, 8, 9, 10}
+my_set = {1, 3} 
 my_set.update([4, 5], {1, 6, 8},(9,10)) 
 my_set.update(68,40) #it will not works it works only with itterable elements like list, tuple etc
 print(my_set)
