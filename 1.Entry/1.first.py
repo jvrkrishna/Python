@@ -7,6 +7,6 @@ print(a)
 
 if 5>10:
     print("You did it writes")
-
-if 2>1:
+edfjkewrbnfewjklnfeqjbfeqjbf
+if 2>1:daV,J
     print("You did it write")
