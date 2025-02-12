@@ -7,5 +7,5 @@ print(a)
 
 if 5>10:
     print("You did it writes")
-if 2>1:daV,J
+if 2>1:
     print("You did it write")
