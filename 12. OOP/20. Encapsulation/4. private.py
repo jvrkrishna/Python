@@ -42,34 +42,34 @@ print(a.__x)#we cannot access private attribute outside the class raise error
 
 #Ex: Accessing Methods inside the class
 class A:
-    def _m1(self): #private method
+    def __m1(self): #private method
         print("m1 method")
     
     def test(self):
-        self._m1() #we are calling private method inside the class
+        self.__m1() #we are calling private method inside the class
 
 # class B(A):
 #     def new_test(self):
-#         self._m1() #we are calling private method inside the child class.
+#         self.__m1() #we are calling private method inside the child class.
         
 a=A()
 a.test()
 
 #Ex: Accessing Methods inside the child class
 class A:
-    def _m1(self): #private method
+    def __m1(self): #private method
         print("m1 method")
 
 class B(A):
     def new_test(self):
-        self._m1() #we are calling private method inside the child class which is not possible.
+        self.__m1() #we are calling private method inside the child class which is not possible.
 
 b=B()
 b.new_test()
 
 #Ex: Accessing Methods outside the child class
 class A:
-    def _m1(self): #private method
+    def __m1(self): #private method
         print("m1 method")
 
 a=A()
