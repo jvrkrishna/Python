@@ -8,7 +8,7 @@ def sample():
 sample()
 
 
-####Nested fucntions
+####Nested functions
 '''
 Calling inner functions outside of outer function is not possible to call inner function outside of the function'''
 def outer_fun():
