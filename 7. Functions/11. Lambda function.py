@@ -1,7 +1,7 @@
 #Lambda function
 '''
 lambda function is a small anonymous function.
-Normal function is define using de keyword and lambda function is define using lambda keyword.A Lambda function can take any number of arguments, but can only have one expression.'''
+Normal function is define using def keyword and lambda function is define using lambda keyword.A Lambda function can take any number of arguments, but can only have one expression.'''
 #Example:
 x=lambda a,b,c:a+b
 print(x(1,8,3))
