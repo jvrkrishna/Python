@@ -22,6 +22,22 @@ n=int(input("Enter n Value:"))
 while i<=10:
     print("%d X %d = %d"%(n,i,n*i))  #print(f'{n} * {i} = {n*i}')
     i=i+1
+    
+# WAP to print stars
+i=1
+while i<10:
+    print("*",end=' ')
+    i=i+1
+
+
+#WAP to print sum of N natural numbers
+i=1
+sum=0
+while i<10:
+    sum=sum+i
+    i=i+1
+print("Sum is:",sum)
+
 
 #Using else with while loop
 i=int(input("Enter n Value:"))
@@ -40,21 +56,6 @@ while i<len(a):
         break 
     print(a[i])
     i=i+1
-
-# WAP to print stars
-i=1
-while i<10:
-    print("*",end=' ')
-    i=i+1
-
-#WAP to print sum of N natural numbers
-i=1
-sum=0
-while i<10:
-    sum=sum+i
-    i=i+1
-print("Sum is:",sum)
-
 
 #WAP ro reap the numbers until -1 is entered also count the -ve, +ve and zero entered by users
 num=int(input("Enter a value:"))
