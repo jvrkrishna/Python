@@ -57,7 +57,7 @@ while i<len(a):
     print(a[i])
     i=i+1
 
-#WAP ro reap the numbers until -1 is entered also count the -ve, +ve and zero entered by users
+#WAP to repeat the numbers until -1 is entered also count the -ve, +ve and zero entered by users
 num=int(input("Enter a value:"))
 pn=0 #positive number
 nn=0 #negative number
