@@ -183,7 +183,7 @@ print(f'{search} is present {count} times')
 #Using for loop
 List = [1, 2, 3, 1, 2, 1, 2, 3, 2, 1]
 indices=[]
-n=int(input("Enter the reqired element:"))
+n=int(input("Enter the reqired element:")) #1
 for i in range(len(List)):
     if List[i]==n:
         indices.append(i)
