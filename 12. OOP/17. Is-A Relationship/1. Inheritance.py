@@ -1,4 +1,4 @@
-#1. IS-A Relationship / Inheritance
+#1. IS-A Relationship / Inheritancexvbcxfvh fcxhxfhfx
 '''
 Inheritance is a mechanism for creating a new class from an existing class.
 Here the old class is called Base class and the new class is called Derived class.
