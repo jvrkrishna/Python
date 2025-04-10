@@ -47,6 +47,11 @@ s=set(t)
 print(s)
 print(type(s))
 
+#Creation of Set Dynamically by using eval() function.
+T6=eval(input("Enter the L1 Elements:"))  #input ------ {10,20,30}
+print(type(T6))
+print(T6)
+
 ################ Accessing ###################
 #We cannot apply indexing and slicing in set.
 
