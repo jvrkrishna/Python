@@ -126,7 +126,7 @@ s.discard(80)  #no error
 print(s)
 
 #pop Method
-#It is used to remove any random element fron the set, it the set is empty it will raised KeyError.
+#It is used to remove any random element from the set, it the set is empty it will raised KeyError.
 s={10,20,30,40,50}
 s.pop() #print(s.pop()) --- It returns pop element
 print(s)
