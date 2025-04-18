@@ -121,8 +121,9 @@ print(s1.count('o',6)) #starts from 6th index
 
 #replace a word
 s1="Hello World"
-print(s1.replace("World","Rk"))
-print(s1) #original string cannot replace because it is immutable
+b=s1.replace("World","Rk")
+print(s1)
+print(b) #original string cannot replace because it is immutable
 
 #split Method
 s1="Hello World"
