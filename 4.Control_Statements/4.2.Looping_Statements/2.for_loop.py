@@ -61,6 +61,27 @@ def hide_char():
 
 hide_char()
 
+
+
+
+wap to hide multi char
+
+
+
+def rajasekhar():
+    name = "rajasekhar nuggu"
+    chars_to_hide = ["a", "u"]  # List of characters to hide
+    hidestr = ""
+    for c in name:
+        if c in chars_to_hide:
+            hidestr += " "  # Replace with a space
+        else:
+            hidestr += c
+    print(hidestr)
+
+rajasekhar()
+
+
 #WAP to print string by skipping some element by using continue      
 def hide_char():
     name="Rama"
