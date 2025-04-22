@@ -22,11 +22,16 @@ print(list(result))   # 1
 for i in result:      #2   Either use 1 or 2 statement to print
     print(i)
     
+print(list(filter(lambda x:x>18,ages)))  #3 Either use 1 or 2 or 3
+     
 #WAP to print age is greater than 18 by using filter with lambda function
 ages=[10,20,30,40,5,8]
 result=filter(lambda x:x>18,ages)
 print(list(result))
 
+#or else
+ages=[10,20,30,40,5,8]
+print(list(filter(lambda x: x > 18, ages)))
 
 #WAP to print the vowels is present in the specific elements with filter.
 sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
