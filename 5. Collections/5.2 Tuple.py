@@ -1,6 +1,4 @@
-'''A tuple in Python is similar to a list. The difference between the two is that we 
-cannot change the elements of a tuple once it is assigned whereas we can change the 
-elements of a list. Tuple with () brackets.'''
+'''A tuple in Python is similar to a list. The difference between the two is that we cannot change the elements of a tuple once it is assigned whereas we can change the elements of a list. Tuple with () brackets.'''
 
 ###############1. Creation of tuple################
 T1=()
