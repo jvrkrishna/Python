@@ -249,12 +249,12 @@ List = [8, 2, 3, 5,8,9]
 print(min(List))
 
 #########Copy Method
-List = [8, 2, 3, 5,8,9]
-print(List)
-b=List.copy()
-List.append(10)
-print(List)
-print(b)
+list1=[10,20,30,40,50]
+list2=[]
+list2=list1.copy()
+list1.append(13)
+print(list1)
+print(list2)
 
 ###### Clear the complete list
 List = [8, 2, 3, 5,8,9]
