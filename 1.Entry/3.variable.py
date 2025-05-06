@@ -29,6 +29,13 @@ y=2
 print(z) #shows as an error because we cannot add number and word
 print("Answer is:" +z)
 
+#to know the address of the variable
+a=10
+b=10
+print(id(a))  #if the value is same then the adress is also same
+print(id(b))
+
+#These below topics where discussed in the functions topic-8
 a="Apple"
 def myfunc():
     print(a)
@@ -50,8 +57,5 @@ def myfunc():
 myfunc()
 print("Python is " + x)
 
-a=10
-b=10
-print(id(a))  #if the value is same then the adress is also same
-print(id(b))
+
 

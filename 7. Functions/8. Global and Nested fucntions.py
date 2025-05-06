@@ -1,12 +1,30 @@
 #######Global Function
 #Local variable has more scope than global variable. If we want to access global variable when local and global with same variable name the we use gobal function.
+
+#Example:
+x = "awesome"
+def myfunc():
+    x = "fantastic"
+    print("Python is " + x)
+myfunc()
+print("Python is " + x)
+
+#Example:
+x = "awesome"
+def myfunc():
+    global x  #global is a keyword which is used to change the global varible in local as well
+    x = "fantastic"
+    print("Python is " + x)
+myfunc()
+print("Python is " + x)
+
+#Example:
 a=10
 def sample():
     a=20
     print(a)   #20
     print(globals()['a'])   #10
 sample()
-
 
 ####Nested functions
 '''
@@ -34,3 +52,6 @@ Output:
 Inside outer function
 Inside inner function
 '''
+
+
+
