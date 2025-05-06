@@ -47,6 +47,15 @@ print(type(a))
 print(type(b))
 print(type(c))
 
+
+#Boolean ---- True, False
+print(bool(1))
+print(bool(0))
+
+print(bool(2))
+print(True)
+print(False)
+
 #input function
 a=input("Enter the input:")
 print(a)
