@@ -37,7 +37,7 @@ reference_variable=classname(arguments)
 Reference varaible is used to refer to an object
 Reference variable is acting as an accessor.
 Reference variable is used to access properties and methods of an object.
-Multiple objects can point to the same object.
+Multiple objects can point to the same class.
 '''
 
 #Example:
