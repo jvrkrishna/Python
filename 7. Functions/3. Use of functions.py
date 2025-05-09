@@ -19,7 +19,7 @@ if c%2==0:
 else:
     print('odd')
     
-#Here in the above line of code we are writing the piece of code again and again on the scenarios uuse functions like below.
+#Here in the above line of code we are writing the piece of code again and again on the scenarios use functions like below.
 def Even_Odd(num):
     if num%2==0:
         print("Even")
