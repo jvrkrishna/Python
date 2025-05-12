@@ -8,6 +8,15 @@ When called again, the function continues execution from the previous yield. A f
 #Example:
 # A Python program to demonstrate use of generator object with next() 
 
+def add(a,b):
+    yield a+b
+    yield a-b
+    yield a*b
+x=add(10,20)
+print(next(x))
+print(next(x))
+print(next(x))
+
 # A generator function 
 def simpleGeneratorFun(): 
 	yield 1
