@@ -3,18 +3,18 @@
 
 153 = 1*1*1 + 5*5*5 + 3*3*3  // 153 is an Armstrong number.
 '''
-num = int(input("Enter a number: "))
+n = int(input("Enter n value: "))
 sum = 0
 
 # find the sum of the cube of each digit
-temp = num
+temp = n
 while temp > 0:
    digit = temp % 10
    sum =sum+ digit ** 3
    temp //= 10
 
 # display the result
-if num == sum:
-   print(num,"is an Armstrong number")
+if n == sum:
+   print(n,"is an Armstrong number")
 else:
-   print(num,"is not an Armstrong number")
+   print(n,"is not an Armstrong number")

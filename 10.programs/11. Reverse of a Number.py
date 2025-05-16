@@ -1,11 +1,11 @@
 ###########Reverse of a number#################
-num=int(input("Enter a value:"))
+n=int(input("Enter n value:"))
 reversed_num=0
 
-while num != 0:
-    digit = num % 10
+while n != 0:
+    digit = n % 10
     reversed_num = reversed_num * 10 + digit
-    num //= 10
+    n//= 10
 
 print("Reversed Number: " + str(reversed_num))
 
