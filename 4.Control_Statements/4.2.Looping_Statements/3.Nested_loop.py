@@ -36,19 +36,18 @@ for i in range(1,11):
     print()
 
 
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+for x in adj:
+    for y in fruits:
+        print(x, y)
+        
 n = int(input("Enter the number of rows you want to print?"))
 i,j=0,0
 for i in range(0,n):
     for j in range(0,i+1):
         print("*",end=" ")
     print()
-
-
-adj = ["red", "big", "tasty"]
-fruits = ["apple", "banana", "cherry"]
-for x in adj:
-    for y in fruits:
-        print(x, y)
 
 #WAP to print the numbers as below output format
 '''
