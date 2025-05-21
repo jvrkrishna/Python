@@ -13,7 +13,7 @@ def Bank():
             global count
             count=count+1
             if(count==3):
-                print("Sorry You have entered the worng password for three times please try after 24 hours")
+                print("Sorry You have entered the wrong password for three times please try after 24 hours")
                 exit(0)
                 Bank()
     print("Welcome to the Bank") 
