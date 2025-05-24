@@ -51,7 +51,7 @@ print(p1 == p2)  # Output: True
 print(p1 == p3)  # Output: False
 
 '''
-Common operator methods to override:
+Common operator methods to overload:
 __add__(self, other) for +
 __sub__(self, other) for -
 __mul__(self, other) for *
