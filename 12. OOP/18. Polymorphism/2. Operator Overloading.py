@@ -10,35 +10,56 @@ print(10+20)
 print('Ram'+'Krishna')
 '''In the above example operator work in different formats like adding, concatination'''
 
-#Ex: Operator overloading without magic method (which is not possible)
-class Employee:
-    def __init__(self,salary):
-        self.salary=salary
-
-class Student:
-    def __init__(self,stipend):
-        self.stipend=stipend
-
-e=Employee(10000)
-s=Student(5000)
-
-#Now add Employee salary + Student Pocket Money
-print(e+s) #Raises Error -- unsupported operand type(s) for +: 'Employee' and 'Student'
-
-#Ex: Operator overloading with magic method
-class Employee:
-    def __init__(self,salary):
-        self.salary=salary
+'''
+1. Overloading the + operator:
+'''
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
     
-    def __add__(self,other):  #We can use sub,gt,lt,ge,le etc.
-        return self.salary+other.stipend
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+    
+    def __repr__(self):
+        return f"Point({self.x}, {self.y})"
 
-class Student:
-    def __init__(self,stipend):
-        self.stipend=stipend
+# Example usage
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+p3 = p1 + p2  # This calls the __add__ method
+print(p3)  # Output: Point(4, 6)
+'''In this example, the + operator for Point objects is overridden by the __add__ method.'''
 
-e=Employee(10000)
-s=Student(5000)
+'''2. Overloading the == operator:'''
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+    
+    def __repr__(self):
+        return f"Point({self.x}, {self.y})"
 
-#Now add Emp salary + Stu Stipend
-print(e+s) #Here if we use + then immediately checks for add magic method like this only remaining as well.
+# Example usage
+p1 = Point(1, 2)
+p2 = Point(1, 2)
+p3 = Point(3, 4)
+print(p1 == p2)  # Output: True
+print(p1 == p3)  # Output: False
+
+'''
+Common operator methods to override:
+__add__(self, other) for +
+__sub__(self, other) for -
+__mul__(self, other) for *
+__truediv__(self, other) for /
+__eq__(self, other) for ==
+__lt__(self, other) for <
+__le__(self, other) for <=
+__gt__(self, other) for >
+__ge__(self, other) for >=
+__ne__(self, other) for !=
+'''
