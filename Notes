@@ -1,0 +1,121 @@
+Sample_project
+C:\Users\jvrkr\git_repo\Django_projects>mkdir 0009
+C:\Users\jvrkr\git_repo\Django_projects>cd 0009
+C:\Users\jvrkr\git_repo\Django_projects\0009>Django-admin startproject Sample_Project
+C:\Users\jvrkr\git_repo\Django_projects\0009>cd Sample_Project
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>python manage.py startapp App1
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>
+
+Now go to settings and Modify:
+1.	Installed Apps
+INSTALLED_APPS = [
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'django.contrib.staticfiles',
+'App1',
+]
+
+2.	Create project level templates folder
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>mkdir templates
+        Now go to settings and Modify:
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+3.	If you require Configure the Database
+In our Django project, SQLite is the default database. If we want, we can configure the other databases also. let's change your database by using this code. Here I configure the MySQL database.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DB_NAME',       # Database name
+        'USER': 'DB_USER',
+        'PASSWORD': 'DB_PASSWORD',
+        'HOST': 'localhost',     # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
+In the same way, we can configure the other databases also.
+4.	If you require modify TIME ZONE also 
+TIME_ZONE = 'Asia/Kolkata'
+
+5.	we need to add styles, colors, and animations to our templates, so we need to configure the static files. Go to end of your settings.py file, there you find an attribute called STATIC_URL, write the below code.
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]# this is your static folder
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #this is you assets folder.
+
+here we are creating 2 folders called static and assets. In the static folder, we store CSS and javascript and other files regarding styling.
+In assets folder we collect all the static files and images and store in it and also we render all static files and images from that one folder assets.
+Create static folder in project level
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>mkdir static
+Create assets folder in project level
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project\>mkdir assets
+
+6.	Media files
+we need to store and retrieve media files in our project. so we definitely configure that media, so create a new folder called media. let's configure that media in settings.py file.
+MEDIA_URL ='/media/'
+MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+Create media folder in project level
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>mkdir media
+
+Note: we must configure those static files and media files in urls.py because those are rendering through URLs. copy the below code and paste in urls.py file in the Django project folder.
+from django.conf.urls.static import static 
+from django.conf import settings
+if settings.DEBUG==False:
+    urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
+7.	Views.py
+If there are any common views to whole project then we can create views.py in project level
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project\Sample_Project>type nul>views.py
+Add the below lines in views.py:
+from django.shortcuts import render,HttpResponse
+def home(request):
+    return HttpResponse("<h1>Hello Home Page</h1>")
+
+Add the below lines in urls.py:
+from . import views
+urlpatterns = [
+    path('',views.home,name='home'),
+]
+Or 
+from .views import home
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',home,name='home'),
+]
+
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>python manage.py runserver
+
+Now create index.html file in templates folder
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project\templates>type nul>index.html
+Go to this link to bootstrap file and copy starter template and paste in index.html--- https://getbootstrap.com/docs/5.0/getting-started/introduction/ 
+
+
+Now go to views and modify views.py
+from django.shortcuts import render,HttpResponse
+def home(request):
+    return HttpResponse(request,'index.html')
+
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>python manage.py runserver
+
+Go and search for nav bar in bootstrap and add in the index.html code
+Now modify what ever modifications you want in html code
+href="{%url 'home' %}" ------------Modify this accordingly in urls.py as requirement in html code
+
+
