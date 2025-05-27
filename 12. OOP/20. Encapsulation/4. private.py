@@ -27,7 +27,7 @@ class A:
     
 class B(A):
     def test(self):
-        print(self.__x) #we cannot access private attribute inside the class raise error
+        print(self.__x) #we cannot access private attribute inside the child class raise error
              
 b=B()
 b.test()
