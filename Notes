@@ -104,18 +104,86 @@ C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>python manage.py run
 
 Now create index.html file in templates folder
 C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project\templates>type nul>index.html
-Go to this link to bootstrap file and copy starter template and paste in index.html--- https://getbootstrap.com/docs/5.0/getting-started/introduction/ 
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project\templates>type nul>about.html
+C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project\templates>type nul>contact.html
 
+Add the below lines in urls.py:
+from django.contrib import admin
+from django.urls import path
+from .views import home,about,contact
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',home,name='home'),
+    path('about/',about,name='about'),
+    path('contact/',contact,name='contact'),
+]
+
+Go to this link to bootstrap file and copy starter template and paste in index.html--- https://getbootstrap.com/docs/5.0/getting-started/introduction/ 
 
 Now go to views and modify views.py
 from django.shortcuts import render,HttpResponse
 def home(request):
     return HttpResponse(request,'index.html')
 
+def about(request):
+    return render(request,'about.html')
+
+def contact(request):
+    return render(request,'contact.html')
+
+
 C:\Users\jvrkr\git_repo\Django_projects\0009\Sample_Project>python manage.py runserver
 
 Go and search for nav bar in bootstrap and add in the index.html code
 Now modify what ever modifications you want in html code
 href="{%url 'home' %}" ------------Modify this accordingly in urls.py as requirement in html code
+href="{%url 'contact' %}"
+href="{%url 'about' %}"
+To Fix the Home to another pages use below line in another pages which ever you required
+{% extends 'index.html' %}
 
+After extends if you want to add any content to the page use below lines:
+{% block content %}
+<h2>This is Contact Page</h2>
+{% endblock content %}
+
+8.	Create app level urls.py
+from django.shortcuts import render
+# Create your views here.
+def App1_view(request):
+return render(request,'App1/App1_home.html') 
+
+Create App1 folder in templates and create App1_home.html in the App1 folder
+{% extends 'index.html' %}
+{% block content %}
+<h2>This is App1 Page</h2>
+{% endblock content %}
+
+Modify in Main Index.html code
+<li class="nav-item">
+          <a class="nav-link" href="{%url 'App1_home' %}">App1_Home</a>
+        </li>
+
+Modify App level urls.py
+from django.urls import path
+from .views import App1_view
+urlpatterns = [
+    path('',App1_view,name='App1_home'),
+]
+
+Modify project level urls.py according to app level urls
+from django.contrib import admin
+from django.urls import path,include
+from .views import home,about,contact
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',home,name='home'),
+    path('about/',about,name='about'),
+    path('contact/',contact,name='contact'),
+   
+#App1 urls
+    	path('App1/',include('App1.urls'))
+]
 
