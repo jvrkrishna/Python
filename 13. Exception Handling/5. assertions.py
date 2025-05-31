@@ -31,6 +31,15 @@ assert a==100," a value is updated" #message
 print(3)
 print(4)
 
+#Example:If u want to give dynamic result
+password=100
+print(1)
+password=20
+print(2) 
+assert password==100,f"AssertionError because password is updated to {password}"
+print(3) 
+print(4)
+
 #Example:
 x = 5
 assert x > 0, "x should be positive"
