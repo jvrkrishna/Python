@@ -140,7 +140,7 @@ Now modify what ever modifications you want in html code
 href="{%url 'home' %}" ------------Modify this accordingly in urls.py as requirement in html code
 href="{%url 'contact' %}"
 href="{%url 'about' %}"
-To Fix the Home to another pages use below line in another pages which ever you required
+To Fix the Home to another pages use below line in another pages which ever you required in the .html pages
 {% extends 'index.html' %}
 
 After extends if you want to add any content to the page use below lines:
@@ -186,4 +186,3 @@ urlpatterns = [
 #App1 urls
     	path('App1/',include('App1.urls'))
 ]
-
