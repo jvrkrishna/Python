@@ -42,7 +42,6 @@ while True:
     key=input("Enter the Key :")
     value=input("Enter the value :")
     dict[key]=value
-    
     choice=input("Enter the choice you want to add more elements in to dictionary [Y/N] :")
     
     if choice=='N':
@@ -216,9 +215,9 @@ for i, j in d.items():
 #Add the elements in to dictionary in run time
 d={}
 while True:
-    name=input("Enter your name:")
-    place=input("Enter your place:")
-    d[name]=place
+    key=input("Enter the Key:")
+    value=input("Enter the Value:")
+    d[key]=value
     choice=input("Do you want to add more candidates [Y/N]:")
     if choice=="N":
         break
