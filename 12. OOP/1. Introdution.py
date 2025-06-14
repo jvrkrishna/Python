@@ -26,69 +26,48 @@ Python collects object-oriented mechanism from c++
 '''
 
 #Difference between POP and OOP
-#POP Calculator Example:
-# Functions to perform basic arithmetic operations
-def add(a, b):
-    return a + b
+'''
+In Python, POP (Procedure-Oriented Programming) and OOP (Object-Oriented Programming) are two different programming paradigms. Here's a clear comparison between them:
 
-def subtract(a, b):
-    return a - b
+🔹 1. Definition
+POP (Procedure-Oriented Programming)	 OOP (Object-Oriented Programming)
+Based on functions and procedures.	     Based on classes and objects.
 
-def multiply(a, b):
-    return a * b
+🔹 2. Focus
+POP                                   	OOP
+Focuses on functions or procedures.	    Focuses on data and objects.
 
-def divide(a, b):
-    if b == 0:
-        return "Error! Division by zero."
-    return a / b
+🔹 3. Structure
+POP                                 	OOP
+Programs are structured into functions.	Programs are structured into objects and classes.
 
-# Example usage of the functions
-a = 10
-b = 5
+🔹 4. Data Handling
+POP	                                        OOP
+Data is global and shared across functions.	Data is encapsulated within objects.
 
-# Calling the functions directly
-print(f"{a} + {b} = {add(a, b)}")
-print(f"{a} - {b} = {subtract(a, b)}")
-print(f"{a} * {b} = {multiply(a, b)}")
-print(f"{a} / {b} = {divide(a, b)}")
+🔹 5. Reusability
+POP	            OOP
+Less reusable.	Highly reusable through inheritance and polymorphism.
 
+🔹 6. Security
+POP	                                        OOP
+Less secure — data is accessible globally.	More secure — data can be private or protected.
 
+🔹 7. Examples in Python
+POP 
+Example:
+def add(x, y):
+    return x + y
+print(add(5, 3))
 
-#OOP Calculator Example:
-# Defining a Calculator class with methods for operations
+OOP Example:
 class Calculator:
-    def __init__(self,a,b):
-        self.a=a
-        self.b=b
-        self.result = 0  # Store the result of calculations
-    
-    def add(self):
-        self.result = self.a + self.b
-        return self.result
-    
-    def subtract(self):
-        self.result = self.a - self.b
-        return self.result
-    
-    def multiply(self):
-        self.result = self.a * self.b
-        return self.result
-    
-    def divide(self):
-        if self.b == 0:
-            return "Error! Division by zero."
-        self.result = self.a / self.b
-        return self.result
-    
-    def get_result(self):
-        return self.result
+    def add(self, x, y):
+        return x + y
+calc = Calculator()
+print(calc.add(5, 3))
 
-# Example usage of the Calculator class
-calc = Calculator(10,5)
+🔹 8. Use Cases
+POP: Suitable for small, simple programs.
 
-# Performing operations using the Calculator object
-print(f"{calc.a} + {calc.b} = {calc.add()}")
-print(f"{calc.a} - {calc.b} = {calc.subtract()}")
-print(f"{calc.a} * {calc.b} = {calc.multiply()}")
-print(f"{calc.a} / {calc.b} = {calc.divide()}")
-print(f"Current result is: {calc.get_result()}")
+OOP: Better for large, complex, and scalable applications.'''
