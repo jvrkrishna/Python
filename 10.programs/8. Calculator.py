@@ -54,3 +54,64 @@ while True:
           break
     else:
         print("Invalid Input")
+        
+# Calculator using variable-length arguments
+
+def add(*args):
+    return sum(args)
+
+def subtract(*args):
+    if not args:
+        return 1
+    result = args[0]
+    for num in args[1:]:
+        result -= num
+    return result
+
+def multiply(*args):
+    result = 1
+    for num in args:
+        result *= num
+    return result
+
+def divide(*args):
+    if not args:
+        return "No numbers provided"
+    result = args[0]
+    for num in args[1:]:
+        if num == 0:
+            return "Error! Division by zero."
+        result /= num
+    return result
+
+print("Select operation:")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+
+while True:
+    choice = input("Enter choice (1/2/3/4): ")
+
+    if choice in ('1', '2', '3', '4'):
+        try:
+            numbers = input("Enter numbers separated by space: ")
+            args = tuple(float(num) for num in numbers.split())
+        except ValueError:
+            print("Invalid input. Please enter valid numbers.")
+            continue
+
+        if choice == '1':
+            print("Result:", add(*args))
+        elif choice == '2':
+            print("Result:", subtract(*args))
+        elif choice == '3':
+            print("Result:", multiply(*args))
+        elif choice == '4':
+            print("Result:", divide(*args))
+
+        next_calc = input("Do you want to perform another calculation? (yes/no): ")
+        if next_calc.lower() != 'yes':
+            break
+    else:
+        print("Invalid Input")
