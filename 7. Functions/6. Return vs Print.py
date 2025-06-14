@@ -1,5 +1,9 @@
 ##### return vs print
-'''In functions internally return a value by default as None'''
+'''In functions internally return a value by default as None
+Used inside a function to send a result back to the caller.
+Ends the function execution.
+The returned value can be stored, used, or manipulated later.
+'''
 #Example:
 def add(a):
     print(a)
