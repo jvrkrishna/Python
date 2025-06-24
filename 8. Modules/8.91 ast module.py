@@ -70,7 +70,7 @@ while True:
     value_input = input("Enter the value: ")
 
     # Check if the input is an integer
-    if value_input.isdigit() or (value_input.startswith('-') and value_input[1:].isdigit()):
+    if value_input.isdigit() or value_input.startswith('+') or value_input.startswith('-'):
         value = int(value_input)
     else:
         value = value_input  # Treat anything else as a string
@@ -83,31 +83,3 @@ while True:
 
 print("Final dictionary:", my_dict)
 
-#Example: Accept Only int, list, tuple, or set
-import ast
-
-my_dict = {}
-
-while True:
-    key = input("Enter the key: ")
-    value_input = input("Enter the value (int, list, tuple, or set): ")
-
-    try:
-        # Evaluate the input safely
-        value = ast.literal_eval(value_input)
-
-        # Check allowed types
-        if not isinstance(value, (int, list, tuple, set)):
-            raise ValueError("Only int, list, tuple, or set are allowed.")
-
-    except (ValueError, SyntaxError) as e:
-        print("Invalid input:", e)
-        continue  # Skip and ask again
-
-    my_dict[key] = value
-
-    choice = input("Do you want to add more elements to the dictionary? [Y/N]: ")
-    if choice.upper() == 'N':
-        break
-
-print("Final dictionary:", my_dict)
