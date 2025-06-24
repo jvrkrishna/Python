@@ -28,6 +28,12 @@ print(random.sample(list,3))   #here 3 indicates return 3 items in list
 print(random.sample(range(100),6))
 
 
-#choice() it will gice any one value as output from list
+#choice() it will give any one value as output from list
 list=[10,20,30,40]
 print(random.choice(list))
+
+#String characters in random 
+import random
+
+s = "abcdef"
+print(random.choice(s))  # Output could be 'a', 'b', ..., 'f'
