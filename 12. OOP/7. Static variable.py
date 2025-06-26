@@ -20,6 +20,10 @@ p1=Person()
 Person.school_name="Sri Chaitanya" #static variable
 print(Person.__dict__)
 
+p1.school_name="Sri Chaintanya"
+print(p1.__dict__)
+
+
 #Example 3: Creation of static variable inside the constructor
 class Person:
     def __init__(self):
