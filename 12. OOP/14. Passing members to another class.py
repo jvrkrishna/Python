@@ -30,12 +30,12 @@ class Student:
         print(f'Age is {self.age}')
 
 class Staff:
-    def modify_age(self, x):  # instance method (requires self)
+    def modify(self, x):  # instance method (requires self)
         print(f'Modified Age: {x}')
 
 s1 = Student("Ram", 30)
 staff1 = Staff()  # creating an instance of Staff
-staff1.modify_age(s1.age)  # calling instance method with self
+staff1.modify(s1.age)  # calling instance method with self
 
 ###Passing one class members to another class using Class method
 class Student:

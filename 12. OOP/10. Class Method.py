@@ -14,13 +14,13 @@ class person:
     
     @classmethod
     def cls_method(cls):
-        school_location="kakinada"
-        print(f"My school name is {cls.school_name} and location is {school_location}")
+        cls.school_location="kakinada" # we can create by cls
+        person.school_pin=1234 #we can create by class name
+        print(f"My school name is {cls.school_name} and location is {cls.school_location} and pin is {person.school_pin}")
     
 person.cls_method() #we can call by class name
 p1=person()
-p1.cls_method() #we can call by object also
-
+p1.cls_method()
 
 #Example 2:call class method inside another class method
 class person:
@@ -66,3 +66,23 @@ Test.update(30,40)
 Test.access()
 Test.delete()
 print(Test.__dict__)
+
+#Example: accessing one classmethod variables to another classmethod
+class person:
+    school_name="Sri Chaitanya"
+    
+    @classmethod
+    def m1(cls):
+        cls.school_location="kakinada"
+        person.school_pin=1234
+        print(f"My school name is {cls.school_name} and location is {cls.school_location} and pin is {person.school_pin}")
+        
+    @classmethod
+    def m2(cls):
+        print(f"My school name is {cls.school_name} and location is {cls.school_location} and pin is {person.school_pin}") #here we can access another class method variables inside another class and outside the class also
+        
+    
+person.m1() #we can call by class name
+p1=person()
+p1.m1()
+p1.m2()
