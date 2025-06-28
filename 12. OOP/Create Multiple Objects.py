@@ -1,3 +1,4 @@
+#Example 1
 class Student:
     def __init__(self,name,age):
         self.name=name
@@ -19,7 +20,7 @@ s2.Details()
 s3=Student("Raju",32)
 s3.Details()
 
-
+#Example 2
 class Student:
     def __init__(self,name,age):
         self.name=name
@@ -39,7 +40,8 @@ age=[30,25]
 for i in range(len(names)):
     s=Student(names[i],age[i])
     s.Details()
-    
+
+#Example 3 
 #Creation of multiple objects by using lists and for and the output is stored in list.
 obj_list=[]   
 for i in range(len(names)):

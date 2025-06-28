@@ -1,238 +1,123 @@
-###Static variable
-'''A variable that is shared across all instances of a class. It is class level variable.
-If the value of variable is fixed to all objects then we can go for static variable.'''
+#static variables ----- A variable that is shared across all instances of a class. It is class level variable.If the value of variable is fixed to all objects then we can go for static variable.
+'''
+create
+modify
+access
+del --- all these operation we can do in constructor, instance method, static method, class method, outside the class and inside the class.
+'''
 
-#########Creation of static variable#########
-#Example 1: Creation of static variable inside the Class
-class Person:
-    school_name="Sri chaitanya" #static variable
-
-print(Person.school_name)    #We can call directly by class
-p1=Person()
-print(p1.school_name) #We can call by object as well
-print(Person.__dict__)  # verify the static variable is class level object
-print(p1.__dict__)   #Static variable is not object level 
-
-#Example 2: Creation of static variable outside the Class
-class Person:
-    pass
-p1=Person()
-Person.school_name="Sri Chaitanya" #static variable
-print(Person.__dict__)
-
-p1.school_name="Sri Chaintanya"
-print(p1.__dict__)
-
-
-#Example 3: Creation of static variable inside the constructor
-class Person:
+#Creation of static variable
+class sample:
+    a=10 #static inside the class
     def __init__(self):
-        Person.school_name="Sri Chaitanya" #static variable
-
-p1=Person()
-print(Person.__dict__)
-
-#Example 4: Creation of static variable inside the Instance method
-class Person:
-    def Details(self):
-        Person.school_name="Sri Chaitanya" #static variable
-
-p1=Person()
-p1.Details()
-print(Person.__dict__)
-
-#Example 5: Creation of static variable inside the class method by using class name
-class Person:
-    @classmethod
-    def class_method(cls):  #here for class method 1st variable is "cls" like "self"
-        Person.school_name="Sri Chaitanya" #static variable
+        sample.b=20    #static inside the constrcutor 
+            
+    def m1(self):
+        sample.c=30   #static inside the instance method
         
-#Here in this case no need to create object we directly call class methods with class name reference.
-Person.class_method()
-print(Person.__dict__)
-
-#Example 5.1: Creation of static variable inside the class method by using cls variable
-class Person:
     @classmethod
-    def class_method(cls):
-        cls.school_name="Sri Chaitanya"
+    def m2(cls):
+        sample.d=40 #static inside the classmethod
         
-Person.class_method()
-print(Person.__dict__)
-
-#Example 6: Creation of static variable inside the static method by using class name
-class Person:
     @staticmethod
-    def static_method():  #here for static method 1st variable is nothing
-        Person.school_name="Sri Chaitanya" #static variable
+    def m3():
+       sample.e=50 #static inside the static method
         
-#Here in this case no need to create object we directly call class methods with class name reference.
-Person.static_method()
-print(Person.__dict__)
+        
+s=sample()
+sample.f=60  #static inside outside the class
 
-
-###########Accessing the static variable###########
-#Example 1: Accessing the static variable outside the class
-class Person:
-    school_name="Sri Chaitanya"
-
-print(Person.school_name)
-
-#Example 2: Accessing the static variable inside the constructor
-class Person:
-    school_name="Sri Chaitanya"
-    
+#Accessing of static variable
+class sample:
+    a=10 
     def __init__(self):
-        print(Person.school_name)
-
-p1=Person()
-
-#Example 3: Accessing the static variable inside the Instance method
-class Person:
-    school_name="Sri Chaitanya"
-    
-    def details(self):
-        print(Person.school_name)
-
-p1=Person()
-p1.details()
-
-#Example 4: Accessing the static variable inside the class method
-class Person:
-    school_name="Sri Chaitanya"
+        sample.b=20    
+            
+    def m1(self):
+        sample.c=30   
+        
     @classmethod
-    def class_method(cls):
-        print(Person.school_name)
+    def m2(cls):
+        sample.d=40
         
-Person.class_method()
-
-#Example 5: Accessing the static variable inside the static method
-class Person:
-    school_name="Sri Chaitanya"
     @staticmethod
-    def static_method():
-        print(Person.school_name)
+    def m3():
+        sample.e=50 
         
-Person.static_method()
-
-######### Modify static variable ############
-#Example 1: Modify the static variable outside the class
-class Person:
-    school_name="Sri Chaitanya"
         
-print(Person.school_name)
-Person.school_name="Mod Sri Chaitanya"
-print(Person.school_name)
+s=sample()
+sample.f=60 
+print(sample.a) #accessing inside the class static variable by class
+print(s.a) #accessing inside the class static variable by object
 
-#Example 2: Modify the static variable inside the class and inside the constructor
-class Person:
-    school_name="Sri Chaitanya"
+print(sample.b)
+print(s.b)
+
+s.m1()
+print(sample.c)
+print(s.c)
+
+s.m2()
+print(sample.d)
+print(s.d)
+
+s.m3()
+print(sample.e)
+print(s.e)
+
+print(sample.f)
+print(s.f)
+
+#modification of static variable
+class sample:
+    a=10 
+    print(f"a value in inside the class {a}")
     def __init__(self):
-        Person.school_name="Mod Sri Chaitanya"
+        sample.a=20  
+        print(f"a value in constructor {sample.a}")  
+            
+    def m1(self):
+        sample.a=30 
+        print(f"a value in instance method {sample.a}")    
         
-print(Person.school_name)
-p1=Person()
-print(Person.school_name)
-
-#Example 3: Modify the static variable inside the class and inside the instance method
-class Person:
-    school_name="Sri Chaitanya"
-    def details(self):
-        Person.school_name="Mod Sri Chaitanya"
-        
-print(Person.school_name)
-p1=Person()
-p1.details()
-print(Person.school_name)
-
-#Example 4: Modify the static variable inside the class and inside the class method
-class Person:
-    school_name="Sri Chaitanya"
-    
     @classmethod
-    def class_method(cls):
-        Person.school_name="Mod Sri Chaitanya"
+    def m2(cls):
+        sample.a=40
+        print(f"a value in class method {sample.a}")  
         
-print(Person.school_name)
-p1=Person()
-p1.class_method()
-print(Person.school_name)
-
-#Example 5: Modify the static variable inside the class and inside the static method
-class Person:
-    school_name="Sri Chaitanya"
-    
     @staticmethod
-    def static_method():
-        Person.school_name="Mod Sri Chaitanya"
+    def m3():
+        sample.a=50 
+        print(f"a value in static method {sample.a}")  
         
-print(Person.school_name)
-p1=Person()
-p1.static_method()
-print(Person.school_name)
-
-########### Deletion of static variable #############
-#Example 1: Deletion of static variable outside the class
-class Person:
-    school_name="Sri Chaitanya"
         
-print(Person.__dict__)
+s=sample()
+sample.a=60 
 
-del Person.school_name
-print(Person.__dict__)
+sample.a
+s.m1()
+s.m2()
+s.m3()
 
-#Example 2: Deletion of static variable Inside the class
-class Person:
-    school_name="Sri Chaitanya"
-    del school_name
-        
-print(Person.__dict__)
+#Deleting of static variable
+class sample:
+    a=10 
 
-#Example 3: Deletion of static variable inside the class and inside the constructor
-class Person:
-    school_name="Sri Chaitanya"
     def __init__(self):
-        del Person.school_name
+        del sample.a
+            
+    def m1(self):
+        del sample.a
         
-print(Person.__dict__)
-
-p1=Person()
-print(Person.__dict__)
-
-#Example 4: Deletion of static variable inside the class and inside the instance method
-class Person:
-    school_name="Sri Chaitanya"
-    def details(self):
-        del Person.school_name
-        
-print(Person.__dict__)
-
-p1=Person()
-p1.details()
-print(Person.__dict__)
-
-#Example 5: Deletion of static variable inside the class and inside the class method
-class Person:
-    school_name="Sri Chaitanya"
-    
     @classmethod
-    def class_method(cls):
-        del Person.school_name
+    def m2(cls):
+        del sample.a
         
-print(Person.__dict__)
-Person.class_method()
-print(Person.__dict__)
-
-#Example 6: Deletion of static variable inside the class and inside the static method
-class Person:
-    school_name="Sri Chaitanya"
-    
     @staticmethod
-    def static_method():
-        del Person.school_name
-        
-print(Person.__dict__)
-Person.static_method()
-print(Person.__dict__)
+    def m3():
+        del sample.a 
+       
+s=sample()
+del sample.a
 
-
+print(sample.a)
