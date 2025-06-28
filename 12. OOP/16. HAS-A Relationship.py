@@ -24,56 +24,57 @@ Here without College(Container Object) there are no departments(Contained object
 '''
 
 class Car:
-    def __init__(self,cname,ccolor,cprice):
-        self.cname=cname
-        self.ccolor=ccolor
-        self.cprice=cprice
-    def Car_details(self):
-        print(f'Car Name is {self.cname}')
-        print(f'Car color is {self.ccolor}')
-        print(f'Car Price is {self.cprice}')
-        print("* " * 20)
-        
-class Laptop:
-    def __init__(self,lname,lcolor,lprice):
-        self.lname=lname
-        self.lcolor=lcolor
-        self.lprice=lprice
-    def Laptop_details(self):
-        print(f'Laptop Name is {self.lname}')
-        print(f'Laptop color is {self.lcolor}')
-        print(f'Laptop Price is {self.lprice}')
+    def __init__(self, cname, ccolor, cprice):
+        self.cname = cname
+        self.ccolor = ccolor
+        self.cprice = cprice
 
-        
-class Employee:
-    def __init__(self,ename,eid,eaddress):
-        self.ename=ename
-        self.eid=eid
-        self.eaddress=eaddress
-        self.c=Car('Thar','Black','20Lakhs') # Object creation of car class
-        self.l=Laptop("HP","White","40Thousand") # Object creation of Laptop class
+    def Car_details(self,ename):
+        print(f'{ename} Car Name is {self.cname}')
+        print(f'{ename} Car color is {self.ccolor}')
+        print(f'{ename} Car Price is {self.cprice}')
+        print("* " * 20)
+
+
+class Laptop:
+    def __init__(self, lname, lcolor, lprice):
+        self.lname = lname
+        self.lcolor = lcolor
+        self.lprice = lprice
+
+    def Laptop_details(self, ename):  # Accept emp_name as an argument
+        print(f'{ename} Laptop Name is {self.lname}')
+        print(f'{ename} Laptop color is {self.lcolor}')
+        print(f'{ename} Laptop Price is {self.lprice}')
+        print("* " * 20)
+
+
+class Person:
+    def __init__(self, ename, eid, eaddress):
+        self.ename = ename
+        self.eid = eid
+        self.eaddress = eaddress
+        self.l = Laptop("Lenovo", "Grey", "40K")
+
     def Emp_details(self):
         print(f'Emp Name is {self.ename}')
-        print(f'Emp id is {self.eid}')
+        print(f'Emp ID is {self.eid}')
         print(f'Emp Address is {self.eaddress}')
-        print("* " * 20)
-        self.c.Car_details() # Print the details of another class
-        self.l.Laptop_details() # Print the details of another class
-        
+        self.l.Laptop_details(self.ename)  # Pass the emp_name to the Laptop's details
 
-e=Employee("Ram", 1234, "Kakinada")
-e.Emp_details()
+
+# Example usage
+p1 = Person("Sekhar", 1001, "Guntur")
+p1.Emp_details()
         
 '''
-Emp Name is Ram
-Emp id is 1234
-Emp Address is Kakinada
-Car Name is Thar
-Car color is Black
-Car Price is 20Lakhs
-Laptop Name is HP
-Laptop color is White
-Laptop Price is 40Thousand
+EEmp Name is Sekhar
+Emp ID is 1001
+Emp Address is Guntur
+Sekhar Laptop Name is Lenovo
+Sekhar Laptop color is Grey
+Sekhar Laptop Price is 40K
+
 '''
 
 #Here in the above program Employee is Containership, car and laptops are smaller objects
