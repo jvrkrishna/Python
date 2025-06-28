@@ -34,7 +34,7 @@ Inner Class
 Outer class
 '''
 
-#object creation inside Inner class
+#object creation Inner Inner class
 class Outer:
     def __init__(self):
         print("Outer class")
