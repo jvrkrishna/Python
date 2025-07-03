@@ -8,6 +8,22 @@ Inside the class we can call class method using class name and outside the class
 By using class method we can perform various operations like modify, delete, etc.
 '''
 
+#Example 0:
+class sample:
+    @classmethod
+    def m1(self,name):
+        self.name=name
+        print(f"My name is {self.name}")
+        print(f"My name is {sample.name}")
+        
+    def m2(self):
+        print(f"My name is {self.name}")
+        print(f"My name is {sample.name}")
+        
+s=sample()
+s.m1("Rama")
+s.m2()
+    
 #Example 1:
 class person:
     school_name="Sri Chaitanya"
