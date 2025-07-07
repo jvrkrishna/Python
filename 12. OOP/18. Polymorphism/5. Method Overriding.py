@@ -55,7 +55,7 @@ class Cat(Animal):
     def sound(self):
         print("Cat Meows")
         
-if __name__=="__main__":
-    d=Dog()
-    d.sound()
+
+d=Dog()
+d.sound()
         
