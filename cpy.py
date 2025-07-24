@@ -35,6 +35,20 @@ print(my_dict)
 my_dict=dict({(1,"Apple"),(2,"Raju")})
 print(my_dict)
 
+#####Create the dictionary dynamically
+dict={}
+
+while True:
+    key=input("Enter the Key :")
+    value=input("Enter the value :")
+    dict[key]=value
+    choice=input("Enter the choice you want to add more elements in to dictionary [Y/N] :")
+    
+    if choice=='N':
+        break
+
+print(dict)
+
 ############ Accessing the elements in the dict #############
 my_dict={"name":"Rama","age":30}
 print(my_dict["age"])
@@ -186,6 +200,38 @@ r=range(3)
 l=["Ram","Banti","Chanti"]
 d=dict.fromkeys(r, l)
 print(d)
+
+
+#Count the No of occurance present inside the string.
+s="Rama"
+d={}
+for i in s:
+    d[i]=d.get(i, 0)+1
+print(d)
+
+for i, j in d.items():
+    print(f'{i} is present {j} times')
+    
+#Add the elements in to dictionary in run time
+d={}
+while True:
+    key=input("Enter the Key:")
+    value=input("Enter the Value:")
+    d[key]=value
+    choice=input("Do you want to add more candidates [Y/N]:")
+    if choice=="N":
+        break
+    
+#Access the elements from dictionary at run time
+while True:
+    name=input("Enter the name to get the place:")
+    place=d.get(name)
+    print(f"Hi {name} you are from {place}")
+    
+    choice=input("Do you want to search more[Y/N]:")
+    
+    if choice=="N":
+        break
 
 #Dictionary Comprehensions
 d={i:i for i in range(0,5)}
