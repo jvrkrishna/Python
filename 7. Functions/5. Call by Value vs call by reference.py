@@ -1,37 +1,60 @@
-###Call By Value vs Call By reference
+'''In Python, the terms call by value and call by reference don't apply in the traditional sense like in C or C++. However, understanding them helps clarify how Python handles function arguments.
 
-############ CALL BY VALUE ##################
-'''If we made any chages on called function it will not reflect on outside the function when we call with value.'''
+🔹 What is Call by Value?
+    Call by Value means that a copy of the variable's value is passed to the function. Changes inside the function do not affect the original variable.
 
-def sample(a):   #Called function
-    print("Inside the function before Modification:",a)  #23
-    print("Inside the function before Modification:",id(a))  #140706834615416
-    a=a+10 #Here we cannot append because int is immutable.
-    print("Inside the function after Modification:",a)  #33
-    print("Inside the function after Modification:",id(a))  #140706834617880
+✅ In Python (with Immutable Types):
+Immutable types (like int, str, float, tuple) behave like call by value.
 
-a=23  #Here int is immutable
-print("Outside the function before calling:",a)  #23
-print("Outside the function before calling:",id(a))  #140706834615416
-sample(a)  #Calling Function
-print("Outside the function after calling:",a)  #23
-print("Outside the function after calling:",id(a))  #140706834615416
+Example:
+    def change_value(x):
+        x = x + 5
+        print("Inside function:", x)
 
-############ CALL BY REFERENCE ##################
-'''If we made any chages on called function it will reflect on outside the function when we call with reference.'''
-def sample(a):   #Called function
-    print("Inside the function before Modification:",a)  #[10, 20, 30]
-    print("Inside the function before Modification:",id(a))  #2063865878784
-    a.append(100)
-    print("Inside the function before Modification:",a)  #[10, 20, 30, 100]
-    print("Inside the function before Modification:",id(a))  #2063865878784
+    a = 10
+    change_value(a)
+    print("Outside function:", a)
 
-a=[10,20,30]  #Here list is mutable
-print("Outside the function before calling:",a)  #[10, 20, 30]
-print("Outside the function before calling:",id(a))  #2063865878784
-sample(a)  #Calling Function
-print("Outside the function after calling:",a)  #[10, 20, 30, 100]
-print("Outside the function after calling:",id(a))  #2063865878784
+Output:
+    Inside function: 15
+    Outside function: 10
 
-###NOTE:
-'''Python does not support Call by value or Call by reference it support by call by object reference. When we pass immutable objects like int,float, tuple it acts like call by value (i.e., modify that object and create new object.) and when we pass mutable objects like list, dictionary it acts like call by reference (i.e., modify that object and will not create new object.).'''
+Why?
+int is immutable.
+x gets a copy of the reference to a, but x = x + 5 creates a new integer object.
+So, a remains unchanged.
+
+🔹 What is Call by Reference?
+Call by Reference means that a reference (address) to the original variable is passed. Changes inside the function affect the original variable.
+
+✅ In Python (with Mutable Types):
+Mutable types (like list, dict, set) behave like call by reference.
+
+Example:
+    def modify_list(lst):
+        lst.append(100)
+        print("Inside function:", lst)
+
+    my_list = [1, 2, 3]
+    modify_list(my_list)
+    print("Outside function:", my_list)
+
+Output:
+    Inside function: [1, 2, 3, 100]
+    Outside function: [1, 2, 3, 100]
+
+Why?
+list is mutable.
+
+The same object is modified, so the change reflects outside the function.
+
+🔸 So What Does Python Actually Use?
+Python uses "call by object reference" (or "call by sharing"):
+The reference to the object is passed.
+Whether the object can be changed depends on whether it’s mutable or immutable.
+
+🔄 Summary Table:
+Type	                    Behavior	      Affects original?	   Example
+int, str, tuple	Immutable → like Call by Value	❌ No	Variable stays the same
+list, dict, set	Mutable → like Call by Reference	✅ Yes	Variable is modified'''
+
