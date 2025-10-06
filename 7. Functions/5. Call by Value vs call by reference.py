@@ -31,13 +31,13 @@ Call by Reference means that a reference (address) to the original variable is p
 Mutable types (like list, dict, set) behave like call by reference.
 
 Example:
-    def modify_list(lst):
-        lst.append(100)
-        print("Inside function:", lst)
+def modify_list(x):
+    x.append(100)
+    print("Inside function:", x)
 
-    my_list = [1, 2, 3]
-    modify_list(my_list)
-    print("Outside function:", my_list)
+a = [1, 2, 3]
+modify_list(a)
+print("Outside function:", a)
 
 Output:
     Inside function: [1, 2, 3, 100]
