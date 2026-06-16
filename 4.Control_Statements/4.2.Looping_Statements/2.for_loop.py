@@ -45,9 +45,8 @@ for i in range(0, len(name), 2):
 # 7. LOOP THROUGH LIST
 # ------------------------------------
 fruits = ["apple", "banana", "cherry"]
-
-for fruit in fruits:
-    print(fruit)
+for i in fruits:
+    print(i)
 
 # ------------------------------------
 # 8. MULTIPLICATION TABLE
@@ -95,16 +94,11 @@ for i in range(3):
 # ------------------------------------
 # 13. REMOVE CHARACTER FROM STRING
 # ------------------------------------
-def hide_char():
-    name = "Rama"
-    for ch in name:
-        if ch == "a":
-            continue
-        print(ch, end="")
-
-hide_char()
-
-print()
+name = "Rama"
+for i in name:
+    if i == "a":
+        continue
+    print(i, end="")
 
 # ------------------------------------
 # 14. LOOP ELSE
@@ -112,7 +106,6 @@ print()
 # ------------------------------------
 for i in range(3):
     print(i)
-
 else:
     print("Loop completed")
 
@@ -123,7 +116,6 @@ for i in range(3):
     for j in range(2):
         print(i, j)
 
-
 # ------------------------------------
 # 16. ENUMERATE
 # Index + Value
@@ -133,7 +125,6 @@ fruits = ["apple", "banana"]
 for index, value in enumerate(fruits):
     print(index, value)
 
-
 # ------------------------------------
 # 17. ZIP
 # Multiple lists together
@@ -141,19 +132,11 @@ for index, value in enumerate(fruits):
 names = ["Ram", "Hari"]
 marks = [90, 80]
 
-for n, m in zip(names, marks):
-    print(n, m)
-
-
-# ------------------------------------
-# 18. LIST COMPREHENSION
-# ------------------------------------
-square = [i*i for i in range(5)]
-print(square)
-
+for i, j in zip(names, marks):
+    print(i, j)
 
 # ------------------------------------
-# 19. PRINT WITHOUT SPACES
+# 18. PRINT WITHOUT SPACES
 # Example: Input=5 Output=12345
 # ------------------------------------
 n = int(input("Enter number: "))

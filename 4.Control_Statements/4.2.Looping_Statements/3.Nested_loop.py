@@ -1,6 +1,6 @@
 i=1
 while(i<=3):
-    print(i)
+    print(f"outer={i}")
     j=1
     while(j<=3):
         print(j)
