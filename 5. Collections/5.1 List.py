@@ -87,7 +87,7 @@ list=[10,20,30]
 i=0
 n=len(list)
 while i<n:
-    print(i, list[i],n-i)
+    print(i, list[i],i-n)
     i=i+1
     
 #########3. updating the list Elements###############
