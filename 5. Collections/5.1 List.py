@@ -211,10 +211,9 @@ list=[1,2,3]
 list.extend([4])  #we cannot process this extend as sublist
 print(list)
 
+# Add List2 to List1
 List1 = [1, 2, 3]
 List2 = [2, 3, 4, 5]
-
-# Add List2 to List1
 List1.extend(List2)
 print(List1)
 # now Add List1 to List2 List2.extend(List1) 
@@ -251,7 +250,7 @@ print(min(List))
 #########Copy Method
 list1=[10,20,30,40,50]
 list2=[]
-l3=list1.copy()
+l3=list1.copy() 
 list1.append(13)
 print(list1)
 print(list2)
