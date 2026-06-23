@@ -27,8 +27,8 @@ print(type(s))
 #Creation of set from list
 l1=[10,20,30,40,50]
 s1=set(l1)
-print(l1)
-print(type(l1))
+print(s1)
+print(type(s1))
 
 #Creation of set from range()
 s=set(range(10))
@@ -86,7 +86,7 @@ print(my_set)
 # add multiple elements
 # Output: {1, 2, 3, 4}
 my_set = {1, 3} 
-my_set.update([2, 3, 4]) 
+my_set.update({2, 3, 4}) 
 print(my_set)
 
 # add list, set and tuple
@@ -126,7 +126,7 @@ s.discard(80)  #no error
 print(s)
 
 #pop Method
-#It is used to remove any random element from the set, it the set is empty it will raised KeyError.
+#It is used to remove any random element from the set, if the set is empty it will raised KeyError.
 s={10,20,30,40,50}
 s.pop() #print(s.pop()) --- It returns pop element
 print(s)
