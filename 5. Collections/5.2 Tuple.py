@@ -53,8 +53,9 @@ print(my_tuple[-6])	# 'p'
 print(my_tuple[::])
 
 ######## Modify tuple element ################
-my_tuple = (4, 2, 3, [6, 5])
+my_tuple = (4, 2, 3, [6, 5])  #Here [6,5] are list so modified
 my_tuple[3][0] = 9  # Output: (4, 2, 3, [9, 5]) 
+print(my_tuple) 
 
 #my_tuple[2]=4 Raise an error because tuple is immutable.
 print(my_tuple)
