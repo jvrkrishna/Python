@@ -1,117 +1,275 @@
-###Passing one class members to another class using Instance method
+# Passing One Class Object (or Members) to Another Class in Python
+## Common Objects Used in All Programs
+s1 = Student("Ram", 30)
+s2 = Staff()
+'''
+* `s1` → object of `Student`
+* `s2` → object of `Staff` (needed only for instance methods)'''
+
+# 1. Instance Method + Complete Object
 class Student:
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
-        
-    def Details(self):
-        print(f'Name is {self.name}')
-        print(f'Age is {self.age}')
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def details(self):
+        print(f"Name : {self.name}")
+        print(f"Age  : {self.age}")
 
 class Staff:
-    def modify(self,x): #### x is object reference where s1 and x are same.
-        x.age=31
-              
-s1=Student("Ram",30)
-s1.Details()
+    def modify(self, x):
+        x.age = 31
 
-s2=Staff()
+s1 = Student("Ram", 30)
+
+print("Before:")
+s1.details()
+
+s2 = Staff()
 s2.modify(s1)
-s1.Details()
 
-###Here we are passing only one object from one class to another class using instance method
+print("After:")
+s1.details()
+
+### Output
+'''Before:
+Name : Ram
+Age  : 30
+
+After:
+Name : Ram
+Age  : 31
+
+### Memory
+x ───► Student Object ◄─── s1
+          age = 31
+**Original object changes because the complete object is passed.**
+'''
+
+# 2. Instance Method + One Member
 class Student:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-        
-    def Details(self):
-        print(f'Name is {self.name}')
-        print(f'Age is {self.age}')
+
+    def details(self):
+        print(f"Name : {self.name}")
+        print(f"Age  : {self.age}")
 
 class Staff:
-    def modify(self, x):  # instance method (requires self)
-        print(f'Modified Age: {x}')
+    def modify(self, x):
+        print("Received:", x)
+        x = 31
+        print("Changed x to:", x)
 
 s1 = Student("Ram", 30)
-staff1 = Staff()  # creating an instance of Staff
-staff1.modify(s1.age)  # calling instance method with self
 
-###Passing one class members to another class using Class method
+print("Before:")
+s1.details()
+
+s2 = Staff()
+s2.modify(s1.age)
+
+print("After:")
+s1.details()
+
+### Output
+'''Before:
+Name : Ram
+Age  : 30
+
+Received: 30
+Changed x to: 31
+
+After:
+Name : Ram
+Age  : 30
+
+### Memory
+x = 30
+s1.age = 30
+
+**Original object does not change because only the value is passed.**'''
+
+# 3. Class Method + Complete Object
 class Student:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-        
-    def Details(self):
-        print(f'Name is {self.name}')
-        print(f'Age is {self.age}')
+
+    def details(self):
+        print(f"Name : {self.name}")
+        print(f"Age  : {self.age}")
 
 class Staff:
     @classmethod
-    def modify_student(cls, student_obj):  # class method
-        student_obj.age = 31
-        print("Student age modified by class method in Staff")
+    def modify(cls, x):
+        x.age = 31
 
 s1 = Student("Ram", 30)
-s1.Details()
 
-Staff.modify_student(s1)  # class method can be called from class
-s1.Details()
+print("Before:")
+s1.details()
 
-###Here we are passing only one object from one class to another class using class method
+Staff.modify(s1)
+
+print("After:")
+s1.details()
+
+### Output
+'''Before:
+Name : Ram
+Age  : 30
+
+After:
+Name : Ram
+Age  : 31
+
+### Memory
+x ───► Student Object ◄─── s1
+          age = 31
+
+**Original object changes because the complete object is passed.**
+'''
+
+# 4. Class Method + One Member
 class Student:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-        
-    def Details(self):
-        print(f'Name is {self.name}')
-        print(f'Age is {self.age}')
+
+    def details(self):
+        print(f"Name : {self.name}")
+        print(f"Age  : {self.age}")
 
 class Staff:
     @classmethod
-    def modify_age(cls, x):  # class method (uses cls)
-        print(f'Modified Age: {x}')
+    def modify(cls, x):
+        print("Received:", x)
+        x = 31
+        print("Changed x to:", x)
 
 s1 = Student("Ram", 30)
-Staff.modify_age(s1.age)  # works like static method, but passes class as first arg
 
-###Passing one class members to another class  using static method
+print("Before:")
+s1.details()
+
+Staff.modify(s1.age)
+
+print("After:")
+s1.details()
+
+### Output
+'''Before:
+Name : Ram
+Age  : 30
+
+Received: 30
+Changed x to: 31
+
+After:
+Name : Ram
+Age  : 30
+
+### Memory
+x = 30
+s1.age = 30
+
+**Original object does not change because only the value is passed.**'''
+
+# 5. Static Method + Complete Object
 class Student:
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
-        
-    def Details(self):
-        print(f'Name is {self.name}')
-        print(f'Age is {self.age}')
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def details(self):
+        print(f"Name : {self.name}")
+        print(f"Age  : {self.age}")
 
 class Staff:
     @staticmethod
-    def modify(x): #### x is object reference where s1 and x are same.
-        x.age=31 
-              
-s1=Student("Ram",30)
-s1.Details()
+    def modify(x):
+        x.age = 31
 
-Staff.modify(s1)  #Here we are passing complete object (s1 ---- x)
-s1.Details()
+s1 = Student("Ram", 30)
 
-###Here we are passing only one object from one class to another class using static method
+print("Before:")
+s1.details()
+
+Staff.modify(s1)
+
+print("After:")
+s1.details()
+
+### Output
+'''Before:
+Name : Ram
+Age  : 30
+
+After:
+Name : Ram
+Age  : 31
+
+### Memory
+x ───► Student Object ◄─── s1
+          age = 31
+
+**Original object changes because the complete object is passed.**'''
+
+# 6. Static Method + One Member
 class Student:
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
-        
-    def Details(self):
-        print(f'Name is {self.name}')
-        print(f'Age is {self.age}')
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def details(self):
+        print(f"Name : {self.name}")
+        print(f"Age  : {self.age}")
 
 class Staff:
     @staticmethod
-    def modify_age(x): 
-        print(x) 
+    def modify(x):
+        print("Received:", x)
+        x = 31
+        print("Changed x to:", x)
 
-s1=Student("Ram",30)
-Staff.modify_age(s1.age)  #Here s1 has two objects but we are taking only age in to x.
+s1 = Student("Ram", 30)
+
+print("Before:")
+s1.details()
+
+Staff.modify(s1.age)
+
+print("After:")
+s1.details()
+
+### Output
+'''Before:
+Name : Ram
+Age  : 30
+
+Received: 30
+Changed x to: 31
+
+After:
+Name : Ram
+Age  : 30
+
+### Memory
+x = 30
+s1.age = 30
+
+**Original object does not change because only the value is passed.**'''
+
+# Final Comparison Table
+'''
+| Method Type     | Call                   | What is Passed? | `s1.age` Changes?|
+| --------------- | ---------------------- | --------------- | ---------------- |
+| Instance Method | `s2.modify(s1)`        | Complete object | ✅ Yes           |
+| Instance Method | `s2.modify(s1.age)`    | Only value      | ❌ No            |
+| Class Method    | `Staff.modify(s1)`     | Complete object | ✅ Yes           |
+| Class Method    | `Staff.modify(s1.age)` | Only value      | ❌ No            |
+| Static Method   | `Staff.modify(s1)`     | Complete object | ✅ Yes           |
+| Static Method   | `Staff.modify(s1.age)` | Only value      | ❌ No            |'''
+
