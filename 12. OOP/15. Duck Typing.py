@@ -1,61 +1,103 @@
-########## Duck Typing ##########
-'''
-Duck typing is to determine if an object is suitable for a purpose by checking for the presence of certain methods and properties rather than objects actual type.
-'''
+# ==========================
+# Duck Typing in Python
+# ==========================
 
-#Example
+"""
+#Definition:
+Duck Typing is a concept in Python where the type of an object is not important. Python only checks whether the object has the required methods or attributes.
+
+## Famous Rule:
+"If it looks like a duck, swims like a duck, and quacks like a duck,
+then treat it as a duck."
+
+## In simple words:
+Python does NOT ask:
+"What class are you?"
+
+Python asks:
+"Can you do this job?"
+"""
+# ==========================================================
+# Example 1: Same Method in Different Classes
+# ==========================================================
+
 class A:
     def m1(self):
-        print('A-m1')
+        print("A-m1")
+
 class B:
     def m1(self):
-        print('B-m1')
+        print("B-m1")
+
 class C:
     def m1(self):
-        print('C-m1')
-        
+        print("C-m1")
+
 def search(x):
     x.m1()
+"""
+This function expects an object that has m1().
+It does not care whether x is A, B, or C.
+""" 
+search(A())
+search(B())
+search(C())
+"""
+Output:
+A-m1
+B-m1
+C-m1
 
-a=A()
-search(a)
+## Explanation:
+All three classes have m1(), so all objects work.
+This is Duck Typing.
+"""
 
-b=B()
-search(b)
-
-#Example
+# ==========================================================
+# Example 2: Duck and Whale
+# ==========================================================
 class Duck:
     def swim(self):
         print("Duck is swimming")
-    
+
     def fly(self):
-        print("Duck is Flying")
+        print("Duck is flying")
+
 class Whale:
     def swim(self):
-        print("Whale is Swimming")
+        print("Whale is swimming")
 
-# def search(x):
-#     x.swim()
-#     x.fly()
-    
-# d=Duck()
-# w=Whale()
-# search(d)
-# search(w)
-        
-for i in [Duck(),Whale()]:
-    i.swim()
-    i.fly()
-
-'''   
+def action(x):
+    x.swim()
+    x.fly()
+"""
+This function expects:
+1. swim()
+2. fly()
+"""
+action(Duck())       # Works
+# action(Whale())    # Error
+"""
+Output:
 Duck is swimming
-Duck is Flying
-Whale is Swimming
-AttributeError: 'Whale' object has no attribute 'fly' 
-'''
+Duck is flying
 
-#Example:
-#Real-Time Duck Typing Example: Payment Systems
+If we execute:
+action(Whale())
+
+## Output:
+Whale is swimming
+AttributeError:
+'Whale' object has no attribute 'fly'
+
+## Explanation:
+Whale has swim() but does not have fly().
+Therefore Duck Typing fails at runtime.
+"""
+
+# ==========================================================
+# Example 3: Real-Time Payment System
+# ==========================================================
 class CreditCard:
     def pay(self, amount, tax):
         print(f"Paid ₹{amount + tax} using Credit Card")
@@ -70,13 +112,52 @@ class Wallet:
 
 def checkout(payment_method):
     payment_method.pay(1000, 100)
+"""
+checkout() only expects a pay() method.
+It does not care about the object's class.
+"""
 
-# Creating objects
-credit = CreditCard()
-upi = UPI()
-wallet = Wallet()
+checkout(CreditCard())
+checkout(UPI())
+checkout(Wallet())
 
-# Duck typing in action
-checkout(upi)       # Output: Paid ₹900 using UPI (discount applied)
-checkout(wallet)    # Output: Paid ₹100000 using Wallet (reward points applied)
-checkout(credit)    # Output: Paid ₹1100 using Credit Card
+"""
+Output:
+Paid ₹1100 using Credit Card
+Paid ₹900 using UPI (discount applied)
+Paid ₹100000 using Wallet (reward points applied)
+
+## Explanation:
+All payment classes have pay() method.
+Therefore checkout() can work with all of them.
+This is a real-world example of Duck Typing.
+"""
+
+# ==========================================================
+# Advantages of Duck Typing
+# ==========================================================
+
+"""
+1. Flexible
+   Different objects can be used in the same function.
+
+2. Less Code
+   No need for many if-else or isinstance() checks.
+
+3. Easy to Extend
+   New classes can be added without changing old code.
+
+4. Supports Polymorphism
+   Same function works with different objects.
+   """
+# ==========================================================
+# Disadvantage of Duck Typing
+# ==========================================================
+"""
+If the required method is missing,
+Python raises an error at runtime.
+
+## Example:
+AttributeError:
+'Whale' object has no attribute 'fly'
+"""
