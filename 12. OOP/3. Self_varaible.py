@@ -49,3 +49,14 @@ class Student:
         
 s1=Student("gopal",30)  #Here s1 is reference variable
 s1.details()
+
+#Example: Calling another method using self
+class Calculator:
+    def square(self, x):
+        return x * x
+
+    def display_square(self, x):
+        print(self.square(x))
+
+c = Calculator()
+c.display_square(5)
